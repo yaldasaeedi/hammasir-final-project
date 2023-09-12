@@ -6,23 +6,97 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--MapVC-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="e6h-Sa-vXk">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MapVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController id="s0l-2h-YRn" customClass="MapVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BV-l5-aEr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-Ey-yke">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="s0l-2h-YRn" id="FVw-YD-P8p"/>
+                                        </connections>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" restorationIdentifier="MapUIV" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-lA-OXP">
+                                        <rect key="frame" x="0.0" y="100" width="393" height="649"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="7OX-1j-XEg"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="w0Z-ep-GZF"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JsE-py-LqD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="leading" secondItem="JsE-py-LqD" secondAttribute="leading" id="Dle-OV-Iee"/>
+                            <constraint firstAttribute="trailing" secondItem="TOi-Yl-9rG" secondAttribute="trailing" id="gD1-zB-Jlh"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="jER-2t-Z0t"/>
+                            <constraint firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" id="sfA-04-96n"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="xLX-jT-Egm"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Anh-4z-RBh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Znp-Nb-OAN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kLP-3T-RQm">
+                                <rect key="frame" x="16" y="7" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="TBI-xe-wBV">
+                                    <children>
+                                        <command title="Contact List" id="eXf-Cs-sJb"/>
+                                        <command title="Travel List" id="xZO-by-SVi"/>
+                                        <command title="Choose Distenation" id="19w-68-goe"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="More"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapUIV" destination="rj7-lA-OXP" id="Y3F-8y-6Dr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wdM-vy-ce3"/>
             </objects>
-            <point key="canvasLocation" x="6" y="-2"/>
+            <point key="canvasLocation" x="947.32824427480909" y="62.676056338028175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yzq-v9-yFr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hn3-ag-3p5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nXx-9w-9is">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s0l-2h-YRn" kind="relationship" relationship="rootViewController" id="XH8-Vg-wkI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uq1-yH-IhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="62.676056338028175"/>
         </scene>
     </scenes>
     <resources>
