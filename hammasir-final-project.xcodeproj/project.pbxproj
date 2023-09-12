@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68258D0056C48C74A9670609 /* Pods_hammasir_final_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */; };
 		E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AB2AB1017800C15974 /* AppDelegate.swift */; };
 		E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AD2AB1017800C15974 /* SceneDelegate.swift */; };
 		E0B962B02AB1017800C15974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AF2AB1017800C15974 /* ViewController.swift */; };
 		E0B962B32AB1017800C15974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962B12AB1017800C15974 /* Main.storyboard */; };
 		E0B962B52AB1017900C15974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B962B42AB1017900C15974 /* Assets.xcassets */; };
 		E0B962B82AB1017900C15974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962B62AB1017900C15974 /* LaunchScreen.storyboard */; };
-		E0B962C32AB1017900C15974 /* hammasir_final_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962C22AB1017900C15974 /* hammasir_final_projectTests.swift */; };
-		E0B962CD2AB1017900C15974 /* hammasir_final_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962CC2AB1017900C15974 /* hammasir_final_projectUITests.swift */; };
-		E0B962CF2AB1017900C15974 /* hammasir_final_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962CE2AB1017900C15974 /* hammasir_final_projectUITestsLaunchTests.swift */; };
+		E0B962DC2AB102D500C15974 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = E0B962DB2AB102D500C15974 /* neshan.license */; };
+		E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */; };
+		E0B962E22AB104F400C15974 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962E42AB104F400C15974 /* Map.storyboard */; };
+		E0B962E72AB1055200C15974 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962E52AB1055200C15974 /* MapVC.swift */; };
+		E0B962EB2AB1086B00C15974 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EA2AB1086B00C15974 /* ContactList.storyboard */; };
+		E0B962ED2AB1088200C15974 /* TravelList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EC2AB1088200C15974 /* TravelList.storyboard */; };
+		E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962EE2AB1089800C15974 /* TravelVC.swift */; };
+		E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F02AB108AD00C15974 /* ContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
+		DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
 		E0B962A82AB1017800C15974 /* hammasir-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hammasir-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B962AB2AB1017800C15974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B962AD2AB1017800C15974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +54,16 @@
 		E0B962B72AB1017900C15974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B962B92AB1017900C15974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B962BE2AB1017900C15974 /* hammasir-final-projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hammasir-final-projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0B962C22AB1017900C15974 /* hammasir_final_projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hammasir_final_projectTests.swift; sourceTree = "<group>"; };
 		E0B962C82AB1017900C15974 /* hammasir-final-projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hammasir-final-projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0B962CC2AB1017900C15974 /* hammasir_final_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hammasir_final_projectUITests.swift; sourceTree = "<group>"; };
-		E0B962CE2AB1017900C15974 /* hammasir_final_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hammasir_final_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0B962DB2AB102D500C15974 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
+		E0B962DD2AB1034B00C15974 /* hammasir-final-project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hammasir-final-project-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "hammasir-final-project-bridgin-header.m"; sourceTree = "<group>"; };
+		E0B962E52AB1055200C15974 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		E0B962E92AB1082B00C15974 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
+		E0B962EA2AB1086B00C15974 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
+		E0B962EC2AB1088200C15974 /* TravelList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelList.storyboard; sourceTree = "<group>"; };
+		E0B962EE2AB1089800C15974 /* TravelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVC.swift; sourceTree = "<group>"; };
+		E0B962F02AB108AD00C15974 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68258D0056C48C74A9670609 /* Pods_hammasir_final_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E45BB2C4B5A93C4AA1C8BC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */,
+				DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E0B9629F2AB1017800C15974 = {
 			isa = PBXGroup;
 			children = (
+				E0B962DB2AB102D500C15974 /* neshan.license */,
 				E0B962AA2AB1017800C15974 /* hammasir-final-project */,
-				E0B962C12AB1017900C15974 /* hammasir-final-projectTests */,
-				E0B962CB2AB1017900C15974 /* hammasir-final-projectUITests */,
 				E0B962A92AB1017800C15974 /* Products */,
+				7E45BB2C4B5A93C4AA1C8BC5 /* Pods */,
+				F632655125D61722B9942864 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,32 +125,31 @@
 		E0B962AA2AB1017800C15974 /* hammasir-final-project */ = {
 			isa = PBXGroup;
 			children = (
+				E0B962B12AB1017800C15974 /* Main.storyboard */,
+				E0B962EA2AB1086B00C15974 /* ContactList.storyboard */,
+				E0B962EC2AB1088200C15974 /* TravelList.storyboard */,
+				E0B962E42AB104F400C15974 /* Map.storyboard */,
+				E0B962AF2AB1017800C15974 /* ViewController.swift */,
+				E0B962E52AB1055200C15974 /* MapVC.swift */,
+				E0B962F02AB108AD00C15974 /* ContactVC.swift */,
+				E0B962EE2AB1089800C15974 /* TravelVC.swift */,
 				E0B962AB2AB1017800C15974 /* AppDelegate.swift */,
 				E0B962AD2AB1017800C15974 /* SceneDelegate.swift */,
-				E0B962AF2AB1017800C15974 /* ViewController.swift */,
-				E0B962B12AB1017800C15974 /* Main.storyboard */,
 				E0B962B42AB1017900C15974 /* Assets.xcassets */,
 				E0B962B62AB1017900C15974 /* LaunchScreen.storyboard */,
 				E0B962B92AB1017900C15974 /* Info.plist */,
+				E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */,
+				E0B962DD2AB1034B00C15974 /* hammasir-final-project-Bridging-Header.h */,
 			);
 			path = "hammasir-final-project";
 			sourceTree = "<group>";
 		};
-		E0B962C12AB1017900C15974 /* hammasir-final-projectTests */ = {
+		F632655125D61722B9942864 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0B962C22AB1017900C15974 /* hammasir_final_projectTests.swift */,
+				5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */,
 			);
-			path = "hammasir-final-projectTests";
-			sourceTree = "<group>";
-		};
-		E0B962CB2AB1017900C15974 /* hammasir-final-projectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E0B962CC2AB1017900C15974 /* hammasir_final_projectUITests.swift */,
-				E0B962CE2AB1017900C15974 /* hammasir_final_projectUITestsLaunchTests.swift */,
-			);
-			path = "hammasir-final-projectUITests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0B962D22AB1017900C15974 /* Build configuration list for PBXNativeTarget "hammasir-final-project" */;
 			buildPhases = (
+				F036792C25593D7B4BCAADB3 /* [CP] Check Pods Manifest.lock */,
 				E0B962A42AB1017800C15974 /* Sources */,
 				E0B962A52AB1017800C15974 /* Frameworks */,
 				E0B962A62AB1017800C15974 /* Resources */,
@@ -195,6 +221,7 @@
 				TargetAttributes = {
 					E0B962A72AB1017800C15974 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					E0B962BD2AB1017900C15974 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -231,9 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B962DC2AB102D500C15974 /* neshan.license in Resources */,
 				E0B962B82AB1017900C15974 /* LaunchScreen.storyboard in Resources */,
+				E0B962E22AB104F400C15974 /* Map.storyboard in Resources */,
+				E0B962ED2AB1088200C15974 /* TravelList.storyboard in Resources */,
 				E0B962B52AB1017900C15974 /* Assets.xcassets in Resources */,
 				E0B962B32AB1017800C15974 /* Main.storyboard in Resources */,
+				E0B962EB2AB1086B00C15974 /* ContactList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +284,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F036792C25593D7B4BCAADB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hammasir-final-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0B962A42AB1017800C15974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B962E72AB1055200C15974 /* MapVC.swift in Sources */,
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
+				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
+				E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */,
+				E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */,
 				E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B962C32AB1017900C15974 /* hammasir_final_projectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B962CD2AB1017900C15974 /* hammasir_final_projectUITests.swift in Sources */,
-				E0B962CF2AB1017900C15974 /* hammasir_final_projectUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +368,14 @@
 				E0B962B72AB1017900C15974 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E0B962E42AB104F400C15974 /* Map.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0B962E92AB1082B00C15974 /* en */,
+			);
+			name = Map.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -432,11 +497,14 @@
 		};
 		E0B962D32AB1017900C15974 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hammasir-final-project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,14 +512,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "neshan.hammasir-final-project";
+				PRODUCT_BUNDLE_IDENTIFIER = neshan.neshanMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "hammasir-final-project/hammasir-final-project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,11 +530,14 @@
 		};
 		E0B962D42AB1017900C15974 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hammasir-final-project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,14 +545,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "neshan.hammasir-final-project";
+				PRODUCT_BUNDLE_IDENTIFIER = neshan.neshanMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "hammasir-final-project/hammasir-final-project-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
