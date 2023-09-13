@@ -10,7 +10,8 @@ import UIKit
 
 class Notifications: UIViewController {
     
-    // ...
+    // notif baraye esm gozashtan ro safar
+    
 
     func showYesNoNotification() {
         let alertController = UIAlertController(title: "Notification", message: "Do you want to proceed?", preferredStyle: .alert)

@@ -81,8 +81,7 @@
                                         <color key="sectionIndexBackgroundColor" systemColor="placeholderTextColor"/>
                                         <color key="sectionIndexTrackingBackgroundColor" systemColor="secondarySystemFillColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contactCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uMs-gf-53u" detailTextLabel="ooG-zv-1OF" rowHeight="96" style="IBUITableViewCellStyleSubtitle" id="V0B-3E-R6Q" userLabel="contactTVC" customClass="CustomTableViewCell" customModule="neshanMap" customModuleProvider="target">
-                                           
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contactCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uMs-gf-53u" detailTextLabel="ooG-zv-1OF" rowHeight="96" style="IBUITableViewCellStyleSubtitle" id="V0B-3E-R6Q" userLabel="contactTVC" customClass="CustomTableViewCell" customModule="hammasir_final_project" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="393" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V0B-3E-R6Q" id="ls7-XQ-BgR">
@@ -134,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQG-RC-ikw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.96093749999989" y="3.5139092240117127"/>
+            <point key="canvasLocation" x="937" y="3"/>
         </scene>
         <!--Add ContactVC-->
         <scene sceneID="Vyq-GV-tqk">
