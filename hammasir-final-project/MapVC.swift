@@ -10,10 +10,46 @@ import UIKit
 class MapVC: UIViewController {
     var mapview: NTMapView?
     @IBOutlet weak var mapUIV: UIView!
-    
+    @IBOutlet weak var SearchDestinationUISB: UISearchBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadMap()
+        
+}
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func showYesNoNotification() {
+            let alertController = UIAlertController(title: "Notification", message: "Do you want to add your companies?", preferredStyle: .alert)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+                // Handle "Yes" button action you should pass the view to travelVC
+                
+                
+            }
+            
+            let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
+                // Handle "No" button action
+                
+            }
+            
+            alertController.addAction(yesAction)
+            alertController.addAction(noAction)
+            
+            present(alertController, animated: true, completion: nil)
+    }
+        
+    @IBAction func searchingForDestination(_ sender: Any) {
+        
+        
+    }
+    
+    func loadMap(){
+        
         mapview = NTMapView(frame: mapUIV.bounds)
         guard let unwrappedMapView = mapview else {
             print("Map does not load")
@@ -33,31 +69,9 @@ class MapVC: UIViewController {
         unwrappedMapView.setZoom(13, durationSeconds: 0.4)
 
         mapUIV.addSubview(unwrappedMapView)
-}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    func showYesNoNotification() {
-            let alertController = UIAlertController(title: "Notification", message: "Do you want to proceed?", preferredStyle: .alert)
-            
-            let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
-                // Handle "Yes" button action
-                print("Yes button tapped")
-            }
-            
-            let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
-                // Handle "No" button action
-                print("No button tapped")
-            }
-            
-            alertController.addAction(yesAction)
-            alertController.addAction(noAction)
-            
-            present(alertController, animated: true, completion: nil)
-    }
-        
+    
+    
         
 }
 
