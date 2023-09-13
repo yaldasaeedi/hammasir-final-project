@@ -81,7 +81,11 @@
                                         <color key="sectionIndexBackgroundColor" systemColor="placeholderTextColor"/>
                                         <color key="sectionIndexTrackingBackgroundColor" systemColor="secondarySystemFillColor"/>
                                         <prototypes>
+<<<<<<< Updated upstream
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contactCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uMs-gf-53u" detailTextLabel="ooG-zv-1OF" rowHeight="96" style="IBUITableViewCellStyleSubtitle" id="V0B-3E-R6Q" userLabel="contactTVC" customClass="CustomTableViewCell" customModule="neshanMap" customModuleProvider="target">
+=======
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contactCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uMs-gf-53u" detailTextLabel="ooG-zv-1OF" rowHeight="96" style="IBUITableViewCellStyleSubtitle" id="V0B-3E-R6Q" customClass="CustomTableViewCell" customModule="hammasir_final_project" customModuleProvider="target">
+>>>>>>> Stashed changes
                                                 <rect key="frame" x="0.0" y="50" width="393" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V0B-3E-R6Q" id="ls7-XQ-BgR">
@@ -135,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="984.96093749999989" y="3.5139092240117127"/>
         </scene>
-        <!--View Controller For Add Contact-->
+        <!--Add ContactVC-->
         <scene sceneID="Vyq-GV-tqk">
             <objects>
-                <viewController id="8lG-DJ-Lej" customClass="ViewControllerForAddContact" customModule="neshanMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8lG-DJ-Lej" customClass="AddContactVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="38X-M6-0PV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
