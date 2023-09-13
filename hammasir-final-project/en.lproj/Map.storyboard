@@ -21,15 +21,31 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-Ey-yke">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="s0l-2h-YRn" id="FVw-YD-P8p"/>
-                                        </connections>
-                                    </searchBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRl-s8-wAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-Ey-yke">
+                                                <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="s0l-2h-YRn" id="FVw-YD-P8p"/>
+                                                </connections>
+                                            </searchBar>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csO-zw-UZa">
+                                                <rect key="frame" x="314.33333333333331" y="0.0" width="78.666666666666686" height="56"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="search"/>
+                                                <connections>
+                                                    <action selector="searchingForDestination:" destination="s0l-2h-YRn" eventType="touchUpInside" id="AXE-6e-PNM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="csO-zw-UZa" firstAttribute="width" secondItem="PnR-Ey-yke" secondAttribute="width" multiplier="0.25" id="yk5-K4-ci0"/>
+                                        </constraints>
+                                    </stackView>
                                     <view contentMode="scaleToFill" restorationIdentifier="MapUIV" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-lA-OXP">
-                                        <rect key="frame" x="0.0" y="100" width="393" height="649"/>
+                                        <rect key="frame" x="0.0" y="56" width="393" height="693"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="7OX-1j-XEg"/>
@@ -72,6 +88,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="SearchDestination" destination="PnR-Ey-yke" id="8av-0Z-FQ9"/>
+                        <outlet property="SearchDestinationUISB" destination="PnR-Ey-yke" id="Yda-Yl-Y6V"/>
                         <outlet property="mapUIV" destination="rj7-lA-OXP" id="Y3F-8y-6Dr"/>
                     </connections>
                 </viewController>

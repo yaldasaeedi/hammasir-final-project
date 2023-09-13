@@ -118,6 +118,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZVy-F3-15X"/>
+                    <connections>
+                        <outlet property="travelMapUIV" destination="v6B-Fr-XTt" id="uqY-aY-4Ut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTW-VV-60U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
