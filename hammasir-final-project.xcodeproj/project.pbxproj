@@ -11,6 +11,7 @@
 		E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386C2AB18E970029C049 /* ContactInformation.swift */; };
 		E03D386F2AB18EC20029C049 /* UserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */; };
 		E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D38702AB18F140029C049 /* CustomContactTVC.swift */; };
+		E03D38732AB1C04C0029C049 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D38722AB1C04C0029C049 /* Notifications.swift */; };
 		E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AB2AB1017800C15974 /* AppDelegate.swift */; };
 		E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AD2AB1017800C15974 /* SceneDelegate.swift */; };
 		E0B962B02AB1017800C15974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AF2AB1017800C15974 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		E03D386C2AB18E970029C049 /* ContactInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformation.swift; sourceTree = "<group>"; };
 		E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefualtsDB.swift; sourceTree = "<group>"; };
 		E03D38702AB18F140029C049 /* CustomContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactTVC.swift; sourceTree = "<group>"; };
+		E03D38722AB1C04C0029C049 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		E0B962A82AB1017800C15974 /* hammasir-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hammasir-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B962AB2AB1017800C15974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B962AD2AB1017800C15974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				E0B962EA2AB1086B00C15974 /* ContactList.storyboard */,
 				E0B962EC2AB1088200C15974 /* TravelList.storyboard */,
 				E0B962AF2AB1017800C15974 /* ViewController.swift */,
+				E03D38722AB1C04C0029C049 /* Notifications.swift */,
 				E0B962E52AB1055200C15974 /* MapVC.swift */,
 				E0B962F02AB108AD00C15974 /* ContactVC.swift */,
 				E0B962F22AB10AC100C15974 /* AddContactVC.swift */,
@@ -356,6 +359,7 @@
 				E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
 				E0B963482AB1113000C15974 /* MainM.swift in Sources */,
+				E03D38732AB1C04C0029C049 /* Notifications.swift in Sources */,
 				E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */,
 				E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */,
 				E03D386F2AB18EC20029C049 /* UserDefualtsDB.swift in Sources */,
