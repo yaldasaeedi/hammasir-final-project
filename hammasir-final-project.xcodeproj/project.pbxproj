@@ -21,18 +21,18 @@
 		E0B962DC2AB102D500C15974 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = E0B962DB2AB102D500C15974 /* neshan.license */; };
 		E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */; };
 		E0B962E22AB104F400C15974 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962E42AB104F400C15974 /* Map.storyboard */; };
-		E0B962E72AB1055200C15974 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962E52AB1055200C15974 /* MapVC.swift */; };
 		E0B962EB2AB1086B00C15974 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EA2AB1086B00C15974 /* ContactList.storyboard */; };
 		E0B962ED2AB1088200C15974 /* TravelList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EC2AB1088200C15974 /* TravelList.storyboard */; };
 		E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962EE2AB1089800C15974 /* TravelVC.swift */; };
 		E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F02AB108AD00C15974 /* ContactVC.swift */; };
 		E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F22AB10AC100C15974 /* AddContactVC.swift */; };
 		E0B962F52AB10B2900C15974 /* TravelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F42AB10B2900C15974 /* TravelTableVC.swift */; };
-		E0B963482AB1113000C15974 /* MainM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963472AB1113000C15974 /* MainM.swift */; };
-		E0B9634A2AB1113D00C15974 /* MapM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963492AB1113D00C15974 /* MapM.swift */; };
-		E0B9634C2AB1115100C15974 /* ContactM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634B2AB1115100C15974 /* ContactM.swift */; };
+		E0B963482AB1113000C15974 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963472AB1113000C15974 /* MainModel.swift */; };
+		E0B9634A2AB1113D00C15974 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963492AB1113D00C15974 /* MapModel.swift */; };
+		E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634B2AB1115100C15974 /* ContactModel.swift */; };
 		E0B963502AB1117400C15974 /* TravelM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634F2AB1117400C15974 /* TravelM.swift */; };
 		E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963512AB1118600C15974 /* TravelTableM.swift */; };
+		E0E256B42AB34C0800042014 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962E52AB1055200C15974 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +60,11 @@
 		E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefualtsDB.swift; sourceTree = "<group>"; };
 		E03D38702AB18F140029C049 /* CustomContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactTVC.swift; sourceTree = "<group>"; };
 		E03D38722AB1C04C0029C049 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		E06DF4C02AB33E1A0073539E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
 		E0B962A82AB1017800C15974 /* hammasir-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hammasir-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B962AB2AB1017800C15974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B962AD2AB1017800C15974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E0B962AF2AB1017800C15974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0B962B22AB1017800C15974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0B962B42AB1017900C15974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B962B72AB1017900C15974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B962B92AB1017900C15974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,18 +74,18 @@
 		E0B962DD2AB1034B00C15974 /* hammasir-final-project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hammasir-final-project-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "hammasir-final-project-bridgin-header.m"; sourceTree = "<group>"; };
 		E0B962E52AB1055200C15974 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		E0B962E92AB1082B00C15974 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
 		E0B962EA2AB1086B00C15974 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		E0B962EC2AB1088200C15974 /* TravelList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelList.storyboard; sourceTree = "<group>"; };
 		E0B962EE2AB1089800C15974 /* TravelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVC.swift; sourceTree = "<group>"; };
 		E0B962F02AB108AD00C15974 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		E0B962F22AB10AC100C15974 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		E0B962F42AB10B2900C15974 /* TravelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableVC.swift; sourceTree = "<group>"; };
-		E0B963472AB1113000C15974 /* MainM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainM.swift; sourceTree = "<group>"; };
-		E0B963492AB1113D00C15974 /* MapM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapM.swift; sourceTree = "<group>"; };
-		E0B9634B2AB1115100C15974 /* ContactM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactM.swift; sourceTree = "<group>"; };
+		E0B963472AB1113000C15974 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		E0B963492AB1113D00C15974 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		E0B9634B2AB1115100C15974 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		E0B9634F2AB1117400C15974 /* TravelM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelM.swift; sourceTree = "<group>"; };
 		E0B963512AB1118600C15974 /* TravelTableM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableM.swift; sourceTree = "<group>"; };
+		E0E256B32AB346E800042014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,9 +159,9 @@
 				E03D38702AB18F140029C049 /* CustomContactTVC.swift */,
 				E0B962EE2AB1089800C15974 /* TravelVC.swift */,
 				E0B962F42AB10B2900C15974 /* TravelTableVC.swift */,
-				E0B963472AB1113000C15974 /* MainM.swift */,
-				E0B963492AB1113D00C15974 /* MapM.swift */,
-				E0B9634B2AB1115100C15974 /* ContactM.swift */,
+				E0B963472AB1113000C15974 /* MainModel.swift */,
+				E0B963492AB1113D00C15974 /* MapModel.swift */,
+				E0B9634B2AB1115100C15974 /* ContactModel.swift */,
 				E03D386C2AB18E970029C049 /* ContactInformation.swift */,
 				E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */,
 				E0B9634F2AB1117400C15974 /* TravelM.swift */,
@@ -347,18 +347,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B962E72AB1055200C15974 /* MapVC.swift in Sources */,
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
-				E0B9634C2AB1115100C15974 /* ContactM.swift in Sources */,
+				E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */,
 				E0B962F52AB10B2900C15974 /* TravelTableVC.swift in Sources */,
-				E0B9634A2AB1113D00C15974 /* MapM.swift in Sources */,
+				E0B9634A2AB1113D00C15974 /* MapModel.swift in Sources */,
 				E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */,
 				E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */,
 				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
+				E0E256B42AB34C0800042014 /* MapVC.swift in Sources */,
 				E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */,
 				E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
-				E0B963482AB1113000C15974 /* MainM.swift in Sources */,
+				E0B963482AB1113000C15974 /* MainModel.swift in Sources */,
 				E03D38732AB1C04C0029C049 /* Notifications.swift in Sources */,
 				E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */,
 				E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */,
@@ -401,7 +401,7 @@
 		E0B962B12AB1017800C15974 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E0B962B22AB1017800C15974 /* Base */,
+				E0E256B32AB346E800042014 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -417,7 +417,7 @@
 		E0B962E42AB104F400C15974 /* Map.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E0B962E92AB1082B00C15974 /* en */,
+				E06DF4C02AB33E1A0073539E /* en */,
 			);
 			name = Map.storyboard;
 			sourceTree = "<group>";

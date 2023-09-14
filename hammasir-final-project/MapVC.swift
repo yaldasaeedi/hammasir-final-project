@@ -4,19 +4,16 @@
 //
 //  Created by Helen Besharatian on 6/22/1402 AP.
 //
-
 import UIKit
 
 class MapVC: UIViewController {
-    var MapModel : MapM?
-    var mapview: NTMapView?
-    @IBOutlet weak var mapUIV: UIView!
-    @IBOutlet weak var SearchDestinationUISB: UISearchBar!
+    var mapModel: MapModel?
+    var mapView: NTMapView?
+    @IBOutlet weak var mapContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMap()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,45 +21,44 @@ class MapVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    @IBAction func searchingForDestination(_ sender: Any) {
-        
-        
-    }
-    
-    func loadMap(){
-        
-        mapview = NTMapView(frame: mapUIV.bounds)
-        guard let unwrappedMapView = mapview else {
-            print("Map does not load")
+    func loadMap() {
+        mapView = NTMapView(frame: mapContainerView.bounds)
+        guard let unwrappedMapView = mapView else {
+            print("Map view is not initialized")
             return
         }
-        let returnedMapView = MapModel?.loadMap(mapView: unwrappedMapView)
-        mapUIV.addSubview(returnedMapView!)
+        
+        let neshan = NTNeshanServices.createBaseMap(NTNeshanMapStyle.NESHAN)
+        unwrappedMapView.getLayers().add(neshan)
+        
+        let neshan2 = NTNeshanServices.createTrafficLayer()
+        unwrappedMapView.getLayers().add(neshan2)
+        
+        let neshan3 = NTNeshanServices.createPOILayer(false)
+        unwrappedMapView.getLayers().add(neshan3)
+        
+        unwrappedMapView.setFocalPointPosition(NTLngLat(x: 59.2, y: 36.5), durationSeconds: 0.4)
+        unwrappedMapView.setZoom(13, durationSeconds: 0.4)
+        mapContainerView.addSubview(unwrappedMapView)
+//
+//        guard let returnedMapView = mapModel?.loadMap(mapView: unwrappedMapView) else {
+//            print("Map didn't load.")
+//            return
+//        }
+//
+//        mapContainerView.addSubview(returnedMapView)
+      
     }
-    
     func longPressOnMap (){
-                // Add a long press gesture recognizer to the view
-            let longPressGesture = UILongPressGestureRecognizer(target: self, action:#selector(viewLongPressed(_:)))
-            mapUIV.addGestureRecognizer(longPressGesture)
+                    // Add a long press gesture recognizer to the view
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action:#selector(viewLongPressed(_:)))
+        mapContainerView.addGestureRecognizer(longPressGesture)
     }
-            
+
     @objc func viewLongPressed(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
             print("View long-pressed!")
                     // Perform any desired actions here
-            }
         }
-}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
-
+}
