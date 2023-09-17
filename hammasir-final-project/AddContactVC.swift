@@ -39,6 +39,7 @@ class AddContactVC: UIViewController {
     private var newImage : UIImage?
     private var newBirthday: Date?
     private var newNote : String?
+    private var newIsChecked : Bool?
     
     override func viewDidLoad() {
         
@@ -116,7 +117,8 @@ class AddContactVC: UIViewController {
                                                     email: newEmail!,
                                                     image: (newImage?.jpegData(compressionQuality: 0.8))!,
                                                     birthday: newBirthday!,
-                                                    note: newNote!)
+                                                    note: newNote!,
+                                                    isChecked: newIsChecked ?? false)
             contactsModel.editContact(editedContact: editingContact, indexPath: editingContactIndexPath!)
             navigationController?.popViewController(animated: true)
 
@@ -127,7 +129,8 @@ class AddContactVC: UIViewController {
                                      newEmail: newEmail ?? "no email",
                                      newImage: (newImage?.jpegData(compressionQuality: 0.8))!,
                                      newBirthday: newBirthday!,
-                                     newNote: newNote ?? "no note")
+                                     newNote: newNote ?? "no note",
+                                     newIsChecked: false)
             navigationController?.popViewController(animated: true)
         }
     }
