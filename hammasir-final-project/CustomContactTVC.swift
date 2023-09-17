@@ -30,5 +30,6 @@ class CustomTableViewCell: UITableViewCell {
             imageView.layer.cornerRadius = imageView.frame.size.height / 2
         }
     }
+    
 
 }

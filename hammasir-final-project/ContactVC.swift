@@ -16,17 +16,17 @@ import UIKit
 class ContactVC : UIViewController {
     
     @IBOutlet weak var contactTableTV: UITableView!
-    
+    var selectedIndexPath: IndexPath?
+    var checkedContact : [IndexPath]?
     var contactsModel = ContactsManager(contactStorage: UserDefaultsDB())
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
         setupTableView()
+        setupSwipeGestureRecognizer()
         contactTableTV.reloadData()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -37,13 +37,12 @@ class ContactVC : UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         
         contactsModel.contactStorage.fetchContacts()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowContactDetailSegue",
-            let indexPath = sender as? IndexPath {
+           let indexPath = sender as? IndexPath {
             
             prepareContactDetailSegue(for: segue, indexPath: indexPath)
         }
@@ -55,7 +54,7 @@ class ContactVC : UIViewController {
             contactTableTV.delegate = self
             contactTableTV.dataSource = self
             contactTableTV.register(CustomTableViewCell.self, forCellReuseIdentifier: "contactCell")
-        }
+    }
         
     private func prepareContactDetailSegue(for segue: UIStoryboardSegue, indexPath: IndexPath) {
         
@@ -68,10 +67,16 @@ class ContactVC : UIViewController {
             destinationVC.editingContactIndexPath = indexPath
         }
     }
+    @IBAction func doneClicked(_ sender: Any) {
+        
+        
+    }
+    
 }
 
 
 extension ContactVC : UITableViewDelegate, UITableViewDataSource {
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -98,20 +103,60 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
+        return true
+    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        
+//        if editingStyle == .delete {
+//
+//            contactsModel.deleteContact(indexPath: indexPath)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            contactsModel.deleteContact(indexPath: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            if editingStyle == .delete {
+                contactsModel.deleteContact(indexPath: indexPath)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+
+                contactTableTV.reloadData()
+            }
         }
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "ShowContactDetailSegue", sender: indexPath)
+    
+    private func setupSwipeGestureRecognizer() {
+        let swipeRightGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeRight(_:)))
+        swipeRightGesture.direction = .right
+        contactTableTV.addGestureRecognizer(swipeRightGesture)
     }
 
+    @objc private func handleSwipeRight(_ gesture: UISwipeGestureRecognizer) {
+        guard let selectedIndexPath = selectedIndexPath else {
+            return
+        }
+        performSegue(withIdentifier: "ShowContactDetailSegue", sender: selectedIndexPath)
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        selectedIndexPath = indexPath
+        
+        // Get the contact at the selected index
+        var contact = contactsModel.getContactsArray()[indexPath.row]
+        
+        // Toggle the checkmark state
+        if contact.getIsChecked() == true {
+            cell?.accessoryType = .none
+            contact.isChecked = false
+            checkedContact?.remove(at: indexPath.row)
+        } else {
+            cell?.accessoryType = .checkmark
+            checkedContact?.append(indexPath)
+            contact.isChecked = true
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 
@@ -130,17 +175,5 @@ extension UIImage {
 
         return UIImage(cgImage: resizedImage)
     }
-}
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}

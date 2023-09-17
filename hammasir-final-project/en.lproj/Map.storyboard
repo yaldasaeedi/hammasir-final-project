@@ -6,115 +6,81 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--MapVC-->
         <scene sceneID="e6h-Sa-vXk">
             <objects>
-                <viewController id="s0l-2h-YRn" customClass="MapVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s0l-2h-YRn" customClass="MapVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5BV-l5-aEr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRl-s8-wAf">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
-                                        <subviews>
-                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-Ey-yke">
-                                                <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="56"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="s0l-2h-YRn" id="FVw-YD-P8p"/>
-                                                </connections>
-                                            </searchBar>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csO-zw-UZa">
-                                                <rect key="frame" x="314.33333333333331" y="0.0" width="78.666666666666686" height="56"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="search"/>
-                                                <connections>
-                                                    <action selector="searchingForDestination:" destination="s0l-2h-YRn" eventType="touchUpInside" id="AXE-6e-PNM"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="csO-zw-UZa" firstAttribute="width" secondItem="PnR-Ey-yke" secondAttribute="width" multiplier="0.25" id="yk5-K4-ci0"/>
-                                        </constraints>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" restorationIdentifier="MapUIV" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-lA-OXP">
-                                        <rect key="frame" x="0.0" y="56" width="393" height="693"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="7OX-1j-XEg"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="582" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="w0Z-ep-GZF"/>
-                                </connections>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JsE-py-LqD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="leading" secondItem="JsE-py-LqD" secondAttribute="leading" id="Dle-OV-Iee"/>
-                            <constraint firstAttribute="trailing" secondItem="TOi-Yl-9rG" secondAttribute="trailing" id="gD1-zB-Jlh"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="jER-2t-Z0t"/>
-                            <constraint firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" id="sfA-04-96n"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="height" secondItem="JsE-py-LqD" secondAttribute="height" id="P6L-f5-Tpd"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="fIA-Z5-jwR"/>
+                            <constraint firstItem="JsE-py-LqD" firstAttribute="trailing" secondItem="TOi-Yl-9rG" secondAttribute="trailing" id="hhh-9w-D0O"/>
+                            <constraint firstItem="JsE-py-LqD" firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" id="mhM-7S-flc"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="leading" secondItem="JsE-py-LqD" secondAttribute="leading" id="vjF-iR-Qco"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="xs4-pY-WV7"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="wdM-vy-ce3" appends="YES" id="xLX-jT-Egm"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Anh-4z-RBh">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Znp-Nb-OAN">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kLP-3T-RQm">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="kLP-3T-RQm">
                                 <rect key="frame" x="16" y="7" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="TBI-xe-wBV">
-                                    <children>
-                                        <command title="Contact List" id="eXf-Cs-sJb"/>
-                                        <command title="Travel List" id="xZO-by-SVi"/>
-                                        <command title="Choose Distenation" id="19w-68-goe"/>
-                                    </children>
-                                </menu>
                                 <state key="normal" title="More"/>
+                                <connections>
+                                    <segue destination="RTn-yD-5jg" kind="show" id="jPZ-dH-hiE"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="SearchDestination" destination="PnR-Ey-yke" id="8av-0Z-FQ9"/>
-                        <outlet property="SearchDestinationUISB" destination="PnR-Ey-yke" id="Yda-Yl-Y6V"/>
-                        <outlet property="mapUIV" destination="rj7-lA-OXP" id="Y3F-8y-6Dr"/>
+                        <outlet property="mapContainerView" destination="TOi-Yl-9rG" id="dRc-bM-bfQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wdM-vy-ce3"/>
             </objects>
-            <point key="canvasLocation" x="947.32824427480909" y="62.676056338028175"/>
+            <point key="canvasLocation" x="5577.8625954198469" y="62.676056338028175"/>
+        </scene>
+        <!--ContactList-->
+        <scene sceneID="ogQ-LQ-PsB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="ContactList" id="RTn-yD-5jg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hlA-Dc-x5v"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKR-qw-kzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6222" y="63"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Yzq-v9-yFr">
+        <scene sceneID="4qF-u5-SwJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hn3-ag-3p5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Map" automaticallyAdjustsScrollViewInsets="NO" id="CUO-aE-wy2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nXx-9w-9is">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6U-VL-wtc">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="s0l-2h-YRn" kind="relationship" relationship="rootViewController" id="XH8-Vg-wkI"/>
+                        <segue destination="s0l-2h-YRn" kind="relationship" relationship="rootViewController" id="yeE-nj-BoV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uq1-yH-IhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFy-Ld-6C9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="62.676056338028175"/>
+            <point key="canvasLocation" x="4652.6717557251905" y="62.676056338028175"/>
         </scene>
     </scenes>
     <resources>

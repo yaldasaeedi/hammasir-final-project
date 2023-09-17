@@ -10,6 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MapVC-->
+        <scene sceneID="UYH-In-kmo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" bundleIdentifier="neshan.neshanMap" referencedIdentifier="MapVC" id="4de-Wi-Dt9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NBr-pY-MXB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nng-Ug-u8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="-404"/>
+        </scene>
         <!--Travel TableVC-->
         <scene sceneID="nJq-ey-y14">
             <objects>
@@ -59,6 +69,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                <connections>
+                                    <segue destination="4de-Wi-Dt9" kind="show" id="ubN-Yw-QAg"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

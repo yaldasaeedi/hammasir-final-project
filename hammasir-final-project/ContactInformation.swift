@@ -15,8 +15,9 @@ struct ContactInformation : Decodable, Encodable{
     private var image : Data
     private var birthday: Date
     private var note : String
+    var isChecked : Bool
     
-    init(name: String, number: Int64,email : String, image: Data, birthday: Date, note: String) {
+    init(name: String, number: Int64,email : String, image: Data, birthday: Date, note: String, isChecked : Bool) {
 
         self.name = name
         self.number = number
@@ -24,6 +25,7 @@ struct ContactInformation : Decodable, Encodable{
         self.image = image
         self.birthday = birthday
         self.note = note
+        self.isChecked = isChecked
     }
     
     func getContactPhone() -> Int64{
@@ -56,5 +58,8 @@ struct ContactInformation : Decodable, Encodable{
     func getContactNote() -> String{
         
         return note
+    }
+    func getIsChecked() -> Bool{
+        return isChecked
     }
 }
