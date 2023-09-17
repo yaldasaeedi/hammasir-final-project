@@ -28,7 +28,7 @@ class AddContactVC: UIViewController {
     @IBOutlet weak var contactBirthdayDP: UIDatePicker!
     @IBOutlet weak var contactNoteTF: UITextField!
     
-    var contactsModel = ContactsManager(contactStorage: UserDefaultsDB())
+    var contactsModel = ContactsManager(contactStorage: UserDefaultsDB(storageKey: "contacts"))
     var contactForEdit : ContactInformation?
     var editingContactIndexPath : IndexPath?
     var contactViewMode: ContactViewMode = .add

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -14,45 +14,83 @@
             <objects>
                 <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s0l-2h-YRn" customClass="MapVC" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5BV-l5-aEr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="582" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="107" width="430" height="791"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-8r-i67">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="791"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="KHF-8r-i67" firstAttribute="width" secondItem="TOi-Yl-9rG" secondAttribute="width" id="6vy-SB-yl6"/>
+                                    <constraint firstItem="KHF-8r-i67" firstAttribute="width" secondItem="TOi-Yl-9rG" secondAttribute="width" id="HL9-FI-4ib"/>
+                                    <constraint firstItem="KHF-8r-i67" firstAttribute="height" secondItem="TOi-Yl-9rG" secondAttribute="height" id="JKb-Ih-Aaw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JsE-py-LqD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="height" secondItem="JsE-py-LqD" secondAttribute="height" id="P6L-f5-Tpd"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="fIA-Z5-jwR"/>
-                            <constraint firstItem="JsE-py-LqD" firstAttribute="trailing" secondItem="TOi-Yl-9rG" secondAttribute="trailing" id="hhh-9w-D0O"/>
-                            <constraint firstItem="JsE-py-LqD" firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" id="mhM-7S-flc"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="leading" secondItem="JsE-py-LqD" secondAttribute="leading" id="vjF-iR-Qco"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="xs4-pY-WV7"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="UbB-SA-CfF"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="bottom" secondItem="JsE-py-LqD" secondAttribute="bottom" id="VgT-gr-SUq"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="centerX" secondItem="5BV-l5-aEr" secondAttribute="centerX" id="mPe-5F-uod"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="height" secondItem="JsE-py-LqD" secondAttribute="height" multiplier="0.994969" id="n29-o9-xYK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Anh-4z-RBh">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Znp-Nb-OAN">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="kLP-3T-RQm">
-                                <rect key="frame" x="16" y="7" width="87" height="30"/>
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="vPb-Om-ajL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wIN-hv-iyV">
+                                <rect key="frame" x="20" y="4.6666666666666679" width="105" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="More"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Start a trip"/>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6o8-tH-2ox">
+                            <rect key="frame" x="151" y="4.6666666666666679" width="128" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Trip history"/>
+                            <connections>
+                                <segue destination="3eT-xP-2hY" kind="show" id="yPv-KB-JHN"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ab9-up-3Fy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ElO-aT-aPY">
+                                <rect key="frame" x="294" y="4.6666666666666679" width="116" height="34.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Contact List"/>
                                 <connections>
-                                    <segue destination="RTn-yD-5jg" kind="show" id="jPZ-dH-hiE"/>
+                                    <segue destination="RTn-yD-5jg" kind="show" id="DAv-Tj-RGf"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapContainerView" destination="TOi-Yl-9rG" id="dRc-bM-bfQ"/>
+                        <outlet property="mapContainerView" destination="KHF-8r-i67" id="dLr-0j-EPf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5577.8625954198469" y="62.676056338028175"/>
+            <point key="canvasLocation" x="5577.5390625" y="62.371888726207899"/>
+        </scene>
+        <!--TripHistory-->
+        <scene sceneID="nVC-Gh-SEI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TravelList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="TripHistory" id="3eT-xP-2hY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZGp-5G-wh8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUZ-9V-egX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6164" y="111"/>
         </scene>
         <!--ContactList-->
         <scene sceneID="ogQ-LQ-PsB">
@@ -62,7 +100,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKR-qw-kzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6222" y="63"/>
+            <point key="canvasLocation" x="6189" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qF-u5-SwJ">
@@ -70,7 +108,7 @@
                 <navigationController storyboardIdentifier="Map" automaticallyAdjustsScrollViewInsets="NO" id="CUO-aE-wy2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6U-VL-wtc">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

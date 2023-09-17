@@ -28,6 +28,7 @@ class MapVC: UIViewController {
     func loadMap() {
         
         mapView = NTMapView(frame: mapContainerView.bounds)
+        
         guard let unwrappedMapView = mapView else {
             
             print("Map view is not initialized")
@@ -45,7 +46,8 @@ class MapVC: UIViewController {
         unwrappedMapView.setFocalPointPosition(NTLngLat(x: 59.2, y: 36.5), durationSeconds: 0.4)
         unwrappedMapView.setZoom(13, durationSeconds: 0.4)
         mapContainerView.addSubview(unwrappedMapView)
-      
+        unwrappedMapView.frame = mapContainerView.bounds
+        unwrappedMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
    
     

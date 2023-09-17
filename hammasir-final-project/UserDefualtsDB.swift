@@ -12,13 +12,16 @@ protocol ContactStorage {
     func fetchContacts() -> [ContactInformation]
     func deleteContact(at indexPath: IndexPath)
     func editContact(_ updatedContact: ContactInformation, at indexPath: IndexPath)
+    func updateContactIsChecked(_ isChecked: Bool, at indexPath: IndexPath)
 }
-
 class UserDefaultsDB: ContactStorage {
     
     private let userDefaults = UserDefaults.standard
-    private let contactsKey = "Contacts"
+    private var storageKey: String
     
+    init(storageKey: String) {
+        self.storageKey = storageKey
+    }
     func saveContact(_ contact: ContactInformation) {
         
         var savedContacts = fetchContacts()
@@ -28,7 +31,7 @@ class UserDefaultsDB: ContactStorage {
             
             let encoder = JSONEncoder()
             let encodedData = try encoder.encode(savedContacts)
-            userDefaults.set(encodedData, forKey: contactsKey)
+            userDefaults.set(encodedData, forKey: storageKey)
         } catch {
             
             print("Error occurred while encoding data: \(error)")
@@ -37,7 +40,7 @@ class UserDefaultsDB: ContactStorage {
     
     func fetchContacts() -> [ContactInformation] {
         
-        guard let encodedData = userDefaults.data(forKey: contactsKey) else {
+        guard let encodedData = userDefaults.data(forKey: storageKey) else {
             return []
         }
         
@@ -60,7 +63,7 @@ class UserDefaultsDB: ContactStorage {
             
             let encoder = JSONEncoder()
             let encodedData = try encoder.encode(savedContacts)
-            userDefaults.set(encodedData, forKey: contactsKey)
+            userDefaults.set(encodedData, forKey: storageKey)
         } catch {
             
             print("Error occurred while encoding data: \(error)")
@@ -75,7 +78,7 @@ class UserDefaultsDB: ContactStorage {
             
             let encoder = JSONEncoder()
             let encodedData = try encoder.encode(savedContacts)
-            userDefaults.set(encodedData, forKey: contactsKey)
+            userDefaults.set(encodedData, forKey: storageKey)
         } catch {
             
             print("Error occurred while encoding data: \(error)")
@@ -91,7 +94,22 @@ class UserDefaultsDB: ContactStorage {
             
             let encoder = JSONEncoder()
             let encodedData = try encoder.encode(savedContacts)
-            userDefaults.set(encodedData, forKey: contactsKey)
+            userDefaults.set(encodedData, forKey: storageKey)
+        } catch {
+            
+            print("Error occurred while encoding data: \(error)")
+        }
+    }
+    func updateContactIsChecked(_ isChecked: Bool, at indexPath: IndexPath){
+        
+        var savedContacts = fetchContacts()
+        savedContacts[indexPath.row].isChecked = isChecked
+        
+        do {
+            
+            let encoder = JSONEncoder()
+            let encodedData = try encoder.encode(savedContacts)
+            userDefaults.set(encodedData, forKey: storageKey)
         } catch {
             
             print("Error occurred while encoding data: \(error)")
