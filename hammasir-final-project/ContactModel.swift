@@ -20,6 +20,7 @@ protocol ContactWriter {
     func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String, newIsChecked: Bool)
     func deleteContact(indexPath: IndexPath)
     func editContact(editedContact: ContactInformation, indexPath: IndexPath)
+    func updateContactIsChecked(isChecked: Bool, at indexPath: IndexPath)
 }
 
 class ContactsManager: ContactReader, ContactWriter {
@@ -66,5 +67,9 @@ class ContactsManager: ContactReader, ContactWriter {
     func editContact(editedContact: ContactInformation, indexPath: IndexPath) {
         
         contactStorage.editContact(editedContact, at: indexPath)
+    }
+    func updateContactIsChecked(isChecked: Bool, at indexPath: IndexPath) {
+        
+        contactStorage.updateContactIsChecked(isChecked, at: indexPath)
     }
 }
