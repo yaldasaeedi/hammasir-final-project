@@ -17,7 +17,7 @@ protocol ContactReader {
 
 protocol ContactWriter {
     
-    func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String)
+    func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String, newIsChecked: Bool)
     func deleteContact(indexPath: IndexPath)
     func editContact(editedContact: ContactInformation, indexPath: IndexPath)
 }
@@ -46,14 +46,15 @@ class ContactsManager: ContactReader, ContactWriter {
         return getContactsArray().map { $0.getContactName() }
     }
     
-    func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String) {
+    func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String, newIsChecked: Bool) {
         
         let newContact = ContactInformation(name: newName,
                                             number: newNumber,
                                             email: newEmail,
                                             image: newImage,
                                             birthday: newBirthday,
-                                            note: newNote)
+                                            note: newNote,
+                                            isChecked : newIsChecked)
         contactStorage.saveContact(newContact)
     }
     
