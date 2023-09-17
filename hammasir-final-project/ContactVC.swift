@@ -17,8 +17,8 @@ class ContactVC : UIViewController {
     
     @IBOutlet weak var contactTableTV: UITableView!
     var selectedIndexPath: IndexPath?
-    var checkedContact : [IndexPath]?
-    var contactsModel = ContactsManager(contactStorage: UserDefaultsDB())
+    var travelers = TravelModel(contactStorage: UserDefaultsDB(storageKey: "travelers"))
+    var contactsModel = ContactsManager(contactStorage: UserDefaultsDB(storageKey: "contacts"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,14 +100,18 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
             imageView.image = resizedImage
             
         }
-        
+        if contact.getIsChecked() == true {
+            cell.accessoryType = .checkmark
+        }else{
+            cell.accessoryType = .none
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
         return true
     }
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        
+//
 //        if editingStyle == .delete {
 //
 //            contactsModel.deleteContact(indexPath: indexPath)
@@ -141,24 +145,23 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.cellForRow(at: indexPath)
         selectedIndexPath = indexPath
         
-        // Get the contact at the selected index
         var contact = contactsModel.getContactsArray()[indexPath.row]
-        
-        // Toggle the checkmark state
         if contact.getIsChecked() == true {
             cell?.accessoryType = .none
-            contact.isChecked = false
-            checkedContact?.remove(at: indexPath.row)
+            contactsModel.updateContactIsChecked(isChecked: false, at: indexPath)
+            travelers.deleteContact(indexPath: indexPath)
+            print(travelers.getContactsArray())
         } else {
             cell?.accessoryType = .checkmark
-            checkedContact?.append(indexPath)
-            contact.isChecked = true
+            contactsModel.updateContactIsChecked(isChecked: true, at: indexPath)
+            travelers.setTraveler(traveler: contact)
+            print(travelers.getContactsArray())
+            
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
 
 extension UIImage {
     

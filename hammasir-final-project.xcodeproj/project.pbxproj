@@ -12,6 +12,7 @@
 		E03D386F2AB18EC20029C049 /* UserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */; };
 		E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D38702AB18F140029C049 /* CustomContactTVC.swift */; };
 		E03D38732AB1C04C0029C049 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D38722AB1C04C0029C049 /* Notifications.swift */; };
+		E060416C2AB6E5CB003116AD /* FellowTravelers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060416B2AB6E5CB003116AD /* FellowTravelers.swift */; };
 		E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AB2AB1017800C15974 /* AppDelegate.swift */; };
 		E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AD2AB1017800C15974 /* SceneDelegate.swift */; };
 		E0B962B02AB1017800C15974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AF2AB1017800C15974 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefualtsDB.swift; sourceTree = "<group>"; };
 		E03D38702AB18F140029C049 /* CustomContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactTVC.swift; sourceTree = "<group>"; };
 		E03D38722AB1C04C0029C049 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		E060416B2AB6E5CB003116AD /* FellowTravelers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowTravelers.swift; sourceTree = "<group>"; };
 		E06DF4C02AB33E1A0073539E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
 		E0B962A82AB1017800C15974 /* hammasir-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hammasir-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B962AB2AB1017800C15974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,8 +163,9 @@
 				E0B962F42AB10B2900C15974 /* TravelTableVC.swift */,
 				E0B963472AB1113000C15974 /* MainModel.swift */,
 				E0B963492AB1113D00C15974 /* MapModel.swift */,
-				E0B9634B2AB1115100C15974 /* ContactModel.swift */,
 				E03D386C2AB18E970029C049 /* ContactInformation.swift */,
+				E0B9634B2AB1115100C15974 /* ContactModel.swift */,
+				E060416B2AB6E5CB003116AD /* FellowTravelers.swift */,
 				E03D386E2AB18EC20029C049 /* UserDefualtsDB.swift */,
 				E0B9634F2AB1117400C15974 /* TravelM.swift */,
 				E0B963512AB1118600C15974 /* TravelTableM.swift */,
@@ -356,6 +359,7 @@
 				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
 				E0E256B42AB34C0800042014 /* MapVC.swift in Sources */,
 				E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */,
+				E060416C2AB6E5CB003116AD /* FellowTravelers.swift in Sources */,
 				E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
 				E0B963482AB1113000C15974 /* MainModel.swift in Sources */,
