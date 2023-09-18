@@ -25,7 +25,6 @@ class ContactVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupSwipeGestureRecognizer()
         
     }
 
@@ -125,18 +124,12 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
             }
         }
     
-    private func setupSwipeGestureRecognizer() {
-        let swipeRightGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeRight(_:)))
-        swipeRightGesture.direction = .right
-        contactTableTV.addGestureRecognizer(swipeRightGesture)
-    }
-
-    @objc private func handleSwipeRight(_ gesture: UISwipeGestureRecognizer) {
-        guard let selectedIndexPath = selectedIndexPath else {
-            return
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            performSegue(withIdentifier: "ShowContactDetailSegue", sender: indexPath)
         }
-        performSegue(withIdentifier: "ShowContactDetailSegue", sender: selectedIndexPath)
-    }
+
 
 }
 

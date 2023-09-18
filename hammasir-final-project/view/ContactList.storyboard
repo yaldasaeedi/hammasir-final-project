@@ -26,24 +26,12 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="abr-mB-Cf1" userLabel="DoneBTNStack">
                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="70.333333333333329"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cds-Qc-q7i">
-                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="28"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
-                                                        <connections>
-                                                            <action selector="doneClicked:" destination="75s-ms-zhX" eventType="touchUpInside" id="7Oi-Xu-dgX"/>
-                                                        </connections>
-                                                    </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWl-Cp-lfA" userLabel="spaceView1">
-                                                        <rect key="frame" x="0.0" y="28.000000000000004" width="131" height="42.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="70.333333333333329"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="UxU-AG-dil"/>
-                                                <constraints>
-                                                    <constraint firstItem="cds-Qc-q7i" firstAttribute="height" secondItem="abr-mB-Cf1" secondAttribute="height" multiplier="0.4" id="UXH-wa-8a3"/>
-                                                </constraints>
                                             </stackView>
                                             <label verifyAmbiguity="off" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="45" translatesAutoresizingMaskIntoConstraints="NO" id="1Lw-oJ-aL6">
                                                 <rect key="frame" x="131" y="0.0" width="131" height="70.333333333333329"/>

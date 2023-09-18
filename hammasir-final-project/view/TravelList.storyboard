@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTW-VV-60U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3631" y="630"/>
+            <point key="canvasLocation" x="3506" y="630"/>
         </scene>
         <!--Table View For Select-->
         <scene sceneID="I2I-4d-7yX">
@@ -128,7 +128,7 @@
                                     <items>
                                         <navigationItem title="Select Contact" id="TFW-rL-pza">
                                             <barButtonItem key="leftBarButtonItem" style="plain" id="cOE-KZ-mx2">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tL6-5K-tUO">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tL6-5K-tUO">
                                                     <rect key="frame" x="16" y="4.6666666666666679" width="87" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
@@ -162,7 +162,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QtK-sz-wVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4799" y="630"/>
+            <point key="canvasLocation" x="4500" y="630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V6I-31-MZU">
