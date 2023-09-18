@@ -32,7 +32,6 @@ struct Notifications {
         viewController.present(alertController, animated: true, completion: nil)
     }
     
-    // ...
     static func showNameInputNotification(on viewController: UIViewController) {
         
         print("its in ShowName...")

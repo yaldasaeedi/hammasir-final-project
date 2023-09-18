@@ -63,7 +63,12 @@ class StartingTripFlow{
         let alertController = UIAlertController(title: "Notification", message: "Do you  want to add fellow traveler?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
-            let storyboard = UIStoryboard(name: "TravelList", bundle: nil)
+            guard let bundle = Bundle(identifier: "neshan.neshanMap") else {
+                print("bundel did not resived")
+                return
+            }
+            let storyboard = UIStoryboard(name: "TravelList", bundle: bundle)
+
             let myViewController = storyboard.instantiateViewController(withIdentifier: "TableViewForSelect") as! TableViewForSelect
             viewController.present(myViewController, animated: true, completion: nil)
             print("Yes button tapped")

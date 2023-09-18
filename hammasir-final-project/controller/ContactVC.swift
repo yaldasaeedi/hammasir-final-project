@@ -13,6 +13,7 @@
 
 import UIKit
 import Foundation
+
 class ContactVC : UIViewController {
     
     @IBOutlet weak var contactTableTV: UITableView!
@@ -24,8 +25,7 @@ class ContactVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupSwipeGestureRecognizer()
-        contactTableTV.reloadData()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +49,6 @@ class ContactVC : UIViewController {
         }
     }
     
-    
     private func setupTableView() {
             contactTableTV.delegate = self
             contactTableTV.dataSource = self
@@ -67,15 +66,7 @@ class ContactVC : UIViewController {
             destinationVC.editingContactIndexPath = indexPath
         }
     }
-    @IBAction func doneClicked(_ sender: Any) {
-        for checkedContact in contactsModel.getContactsArray(){
-            if checkedContact.getIsChecked() == true {
-                
-                ContactVC.fellowTravelerName?.append(checkedContact.getContactName())
-            }
-        }
-        
-    }
+    
     
 }
 
@@ -133,36 +124,13 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
             }
         }
     
-    private func setupSwipeGestureRecognizer() {
-        let swipeRightGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeRight(_:)))
-        swipeRightGesture.direction = .right
-        contactTableTV.addGestureRecognizer(swipeRightGesture)
-    }
-
-    @objc private func handleSwipeRight(_ gesture: UISwipeGestureRecognizer) {
-        guard let selectedIndexPath = selectedIndexPath else {
-            return
-        }
-        performSegue(withIdentifier: "ShowContactDetailSegue", sender: selectedIndexPath)
-    }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        selectedIndexPath = indexPath
-        
-        var contact = contactsModel.getContactsArray()[indexPath.row]
-        if contact.getIsChecked() == true {
-            cell?.accessoryType = .none
-            contactsModel.updateContactIsChecked(isChecked: false, at: indexPath)
             
-        } else {
-            cell?.accessoryType = .checkmark
-            contactsModel.updateContactIsChecked(isChecked: true, at: indexPath)
-            
+            performSegue(withIdentifier: "ShowContactDetailSegue", sender: indexPath)
         }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+
+
 }
 
 extension UIImage {

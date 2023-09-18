@@ -9,13 +9,15 @@ import UIKit
 
 class TableViewForSelect: UITableViewController {
     
+    @IBOutlet var contactTableCell: UITableView!
+    
     var selectedIndexPath: IndexPath?
     var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
-    //static var fellowTravelerName : [String]?
+    static var fellowTravelerName : [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        contactTableCell.register(CustomTableViewCell.self, forCellReuseIdentifier: "contactSelectionCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,7 +39,7 @@ class TableViewForSelect: UITableViewController {
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactSelectionCell", for: indexPath) as! CustomTableViewCell
         let contact = contactsModel.getContactsArray()[indexPath.row]
         cell.textLabel?.text = contact.getContactName()
         if let imageView = cell.imageView {
@@ -58,7 +60,7 @@ class TableViewForSelect: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         selectedIndexPath = indexPath
         
-        var contact = contactsModel.getContactsArray()[indexPath.row]
+        let contact = contactsModel.getContactsArray()[indexPath.row]
         if contact.getIsChecked() == true {
             cell?.accessoryType = .none
             contactsModel.updateContactIsChecked(isChecked: false, at: indexPath)
@@ -71,6 +73,17 @@ class TableViewForSelect: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    @IBAction func DoneClicked(_ sender: Any) {
+        for checkedContact in contactsModel.getContactsArray(){
+            if checkedContact.getIsChecked() == true {
+                
+                TableViewForSelect.fellowTravelerName?.append(checkedContact.getContactName())
+                dismiss(animated: true, completion: nil)
+                
+            }
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
