@@ -11,6 +11,7 @@ class MapVC: UIViewController {
     var mapModel: MapModel?
     var mapView: NTMapView?
     
+    
     @IBOutlet weak var mapContainerView: UIView!
     
     override func viewDidLoad() {
@@ -50,6 +51,10 @@ class MapVC: UIViewController {
         unwrappedMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
    
+    @IBAction func startTripClicked(_ sender: Any) {
+        
+        Notifications.showNameInputNotification(on: self)
+    }
     
     func longPressOnMap (){
                     

@@ -47,6 +47,11 @@ class ContactsManager: ContactReader, ContactWriter {
         return getContactsArray().map { $0.getContactName() }
     }
     
+    func getIsChecked() -> [Bool]{
+        
+        return getContactsArray().map { $0.getIsChecked() }
+    }
+    
     func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String, newIsChecked: Bool) {
         
         let newContact = ContactInformation(name: newName,

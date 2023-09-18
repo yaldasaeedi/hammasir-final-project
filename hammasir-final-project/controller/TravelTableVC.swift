@@ -9,7 +9,8 @@ import UIKit
 
 class TravelTableVC: UIViewController{
     
-    var travelersList = TravelModel(contactStorage: UserDefaultsDB(storageKey: "travelers"))
+    var tripsModel = tripTable(tripModel: TravelUserDefualtsDB(storageKey: "trips"))
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,32 +22,24 @@ class TravelTableVC: UIViewController{
 }
 extension TravelTableVC :  UITableViewDataSource, UITableViewDelegate{
     
-   
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-
+        
         return 1
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return travelersList.getTravelersArray().count
+        return tripsModel.getTripsName().count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelerCell", for: indexPath) as! CustomTableViewCell
-        let traveler = travelersList.getTravelersArray()[indexPath.row]
-        cell.textLabel?.text = traveler.getContactName()
-        if let imageView = cell.imageView {
-            let originalImage = UIImage(data : traveler.getContactImage())
-            let newSize = CGSize(width: 16.0, height: 16.0)
-            let resizedImage = originalImage?.resizedImage(withSize: newSize)
-            imageView.image = resizedImage
-
-        }
-
+        let tripName = tripsModel.getTripsName()[indexPath.row]
+        cell.textLabel?.text = tripName
+        
         return cell
     }
+    
 }
-

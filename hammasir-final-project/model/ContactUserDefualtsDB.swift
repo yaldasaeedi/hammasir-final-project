@@ -14,7 +14,7 @@ protocol ContactStorage {
     func editContact(_ updatedContact: ContactInformation, at indexPath: IndexPath)
     func updateContactIsChecked(_ isChecked: Bool, at indexPath: IndexPath)
 }
-class UserDefaultsDB: ContactStorage {
+class ContactUserDefaultsDB: ContactStorage {
     
     private let userDefaults = UserDefaults.standard
     private var storageKey: String
