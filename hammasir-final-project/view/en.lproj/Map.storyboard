@@ -49,15 +49,18 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wIN-hv-iyV">
                                 <rect key="frame" x="20" y="4.6666666666666679" width="105" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Start a trip"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start a trip"/>
+                                <connections>
+                                    <action selector="startTripClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="Ecn-Aw-ssJ"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6o8-tH-2ox">
                             <rect key="frame" x="151" y="4.6666666666666679" width="128" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" title="Trip history"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Trip history"/>
                             <connections>
                                 <segue destination="3eT-xP-2hY" kind="show" id="yPv-KB-JHN"/>
                             </connections>
@@ -66,8 +69,8 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ElO-aT-aPY">
                                 <rect key="frame" x="294" y="4.6666666666666679" width="116" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Contact List"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Contact List"/>
                                 <connections>
                                     <segue destination="RTn-yD-5jg" kind="show" id="DAv-Tj-RGf"/>
                                 </connections>
@@ -90,7 +93,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUZ-9V-egX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6164" y="111"/>
+            <point key="canvasLocation" x="6189" y="79"/>
         </scene>
         <!--ContactList-->
         <scene sceneID="ogQ-LQ-PsB">
@@ -100,7 +103,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKR-qw-kzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6189" y="42"/>
+            <point key="canvasLocation" x="6186" y="45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qF-u5-SwJ">

@@ -12,14 +12,15 @@
 
 
 import UIKit
-
+import Foundation
 class ContactVC : UIViewController {
     
     @IBOutlet weak var contactTableTV: UITableView!
     var selectedIndexPath: IndexPath?
-    var travelers = TravelModel(contactStorage: UserDefaultsDB(storageKey: "travelers"))
-    var contactsModel = ContactsManager(contactStorage: UserDefaultsDB(storageKey: "contacts"))
-
+    var trip = tripTable(tripModel: TravelUserDefualtsDB(storageKey: "trips"))
+    var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
+    static var fellowTravelerName : [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -68,7 +69,12 @@ class ContactVC : UIViewController {
         }
     }
     @IBAction func doneClicked(_ sender: Any) {
-        
+        for checkedContact in contactsModel.getContactsArray(){
+            if checkedContact.getIsChecked() == true {
+                
+                ContactVC.fellowTravelerName?.append(checkedContact.getContactName())
+            }
+        }
         
     }
     
@@ -149,13 +155,10 @@ extension ContactVC : UITableViewDelegate, UITableViewDataSource {
         if contact.getIsChecked() == true {
             cell?.accessoryType = .none
             contactsModel.updateContactIsChecked(isChecked: false, at: indexPath)
-            travelers.deleteContact(indexPath: indexPath)
-            print(travelers.getContactsArray())
+            
         } else {
             cell?.accessoryType = .checkmark
             contactsModel.updateContactIsChecked(isChecked: true, at: indexPath)
-            travelers.setTraveler(traveler: contact)
-            print(travelers.getContactsArray())
             
         }
         
