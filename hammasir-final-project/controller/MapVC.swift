@@ -10,7 +10,7 @@ class MapVC: UIViewController {
     
     var mapModel: MapModel?
     var mapView: NTMapView?
-    
+    var startingTrip : StartingTripFlow = StartingTripFlow()
     
     @IBOutlet weak var mapContainerView: UIView!
     
@@ -52,8 +52,8 @@ class MapVC: UIViewController {
     }
    
     @IBAction func startTripClicked(_ sender: Any) {
-        
-        Notifications.showNameInputNotification(on: self)
+        startingTrip.showNameInputNotification(on: self)
+       // Notifications.showNameInputNotification(on: self)
     }
     
     func longPressOnMap (){

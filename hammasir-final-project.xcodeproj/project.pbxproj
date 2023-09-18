@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52965D22AB847A300318081 /* StartingTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965D12AB847A300318081 /* StartingTrip.swift */; };
+		B52965D42AB847FF00318081 /* StartingTripFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965D32AB847FF00318081 /* StartingTripFlow.swift */; };
+		B52965DB2AB8599900318081 /* TableViewForSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965DA2AB8599900318081 /* TableViewForSelect.swift */; };
 		B5F265602AB785DE00949BB7 /* TravelUserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */; };
 		E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386C2AB18E970029C049 /* ContactInformation.swift */; };
 		E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386E2AB18EC20029C049 /* ContactUserDefualtsDB.swift */; };
@@ -57,6 +60,9 @@
 		1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
 		6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52965D12AB847A300318081 /* StartingTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTrip.swift; sourceTree = "<group>"; };
+		B52965D32AB847FF00318081 /* StartingTripFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTripFlow.swift; sourceTree = "<group>"; };
+		B52965DA2AB8599900318081 /* TableViewForSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForSelect.swift; sourceTree = "<group>"; };
 		B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelUserDefualtsDB.swift; sourceTree = "<group>"; };
 		E03D386C2AB18E970029C049 /* ContactInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformation.swift; sourceTree = "<group>"; };
 		E03D386E2AB18EC20029C049 /* ContactUserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserDefualtsDB.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				E03D38702AB18F140029C049 /* CustomContactTVC.swift */,
 				E0B962EE2AB1089800C15974 /* TravelVC.swift */,
 				E0B962F42AB10B2900C15974 /* TravelTableVC.swift */,
+				B52965D32AB847FF00318081 /* StartingTripFlow.swift */,
+				B52965DA2AB8599900318081 /* TableViewForSelect.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 				E03D386C2AB18E970029C049 /* ContactInformation.swift */,
 				E0B963492AB1113D00C15974 /* MapModel.swift */,
 				E0B963472AB1113000C15974 /* MainModel.swift */,
+				B52965D12AB847A300318081 /* StartingTrip.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52965D22AB847A300318081 /* StartingTrip.swift in Sources */,
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
 				E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */,
 				E0B962F52AB10B2900C15974 /* TravelTableVC.swift in Sources */,
@@ -382,6 +392,7 @@
 				E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */,
 				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
 				B5F265602AB785DE00949BB7 /* TravelUserDefualtsDB.swift in Sources */,
+				B52965D42AB847FF00318081 /* StartingTripFlow.swift in Sources */,
 				E0E256B42AB34C0800042014 /* MapVC.swift in Sources */,
 				E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */,
 				E0B963522AB1118600C15974 /* TravelTable.swift in Sources */,
@@ -391,6 +402,7 @@
 				E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */,
 				E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */,
 				E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */,
+				B52965DB2AB8599900318081 /* TableViewForSelect.swift in Sources */,
 				E0B963502AB1117400C15974 /* TravelInformation.swift in Sources */,
 				E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */,
 			);

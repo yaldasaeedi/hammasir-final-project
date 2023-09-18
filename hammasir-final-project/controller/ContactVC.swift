@@ -51,7 +51,6 @@ class ContactVC : UIViewController {
     
     
     private func setupTableView() {
-        
             contactTableTV.delegate = self
             contactTableTV.dataSource = self
             contactTableTV.register(CustomTableViewCell.self, forCellReuseIdentifier: "contactCell")

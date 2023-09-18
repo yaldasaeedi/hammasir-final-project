@@ -112,6 +112,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="75s-ms-zhX" id="hs9-wL-tWW"/>
+                                            <outlet property="delegate" destination="75s-ms-zhX" id="qIw-X2-RNj"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
