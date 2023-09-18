@@ -24,29 +24,44 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="71.666666666666671"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM6-lF-rSk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA0-Ca-XT3">
                                         <rect key="frame" x="0.0" y="71.666666666666629" width="393" height="429"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Hi! 
+Welcome to Ham Masir!
+Click on the desired butten to continue.</string>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYL-9T-Dde">
-                                        <rect key="frame" x="0.0" y="500.66666666666657" width="393" height="214.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="500.66666666666663" width="393" height="107"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Starting a trip"/>
                                         <connections>
                                             <segue destination="VZF-Hb-jhv" kind="show" id="Lbo-ni-0RQ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrK-3U-HYK">
+                                        <rect key="frame" x="0.0" y="607.66666666666663" width="393" height="107.33333333333337"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="History of my trips"/>
+                                        <connections>
+                                            <segue destination="iEG-Fh-cqo" kind="show" id="wmB-QI-0VU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="OYL-9T-Dde" firstAttribute="width" secondItem="sYk-Gx-GDk" secondAttribute="width" id="58R-S8-LUV"/>
-                                    <constraint firstItem="OYL-9T-Dde" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.3" id="92I-Cv-Zhq"/>
-                                    <constraint firstItem="QM6-lF-rSk" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.6" id="D1C-4H-JRN"/>
+                                    <constraint firstItem="OYL-9T-Dde" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.15" id="92I-Cv-Zhq"/>
                                     <constraint firstItem="44S-ja-T1F" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.1" id="K6N-QT-GC9"/>
-                                    <constraint firstItem="QM6-lF-rSk" firstAttribute="width" secondItem="sYk-Gx-GDk" secondAttribute="width" id="NsD-NI-xdl"/>
+                                    <constraint firstItem="KrK-3U-HYK" firstAttribute="height" secondItem="OYL-9T-Dde" secondAttribute="height" id="Kw8-7H-NzP"/>
                                     <constraint firstItem="44S-ja-T1F" firstAttribute="width" secondItem="sYk-Gx-GDk" secondAttribute="width" id="vf6-3Q-4hW"/>
                                 </constraints>
                             </stackView>
@@ -78,7 +93,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCa-kW-APM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.2442748091603" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1453" y="-19"/>
+        </scene>
+        <!--TripHistory-->
+        <scene sceneID="i3E-nY-9Ca">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TravelList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="TripHistory" id="iEG-Fh-cqo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1g3-ju-RTU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zff-nC-EwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="15"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JEB-cr-UGy">
@@ -100,9 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
