@@ -1,32 +1,28 @@
-//
-//  TravelVC.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
 
 import UIKit
 
-class TravelVC: UIViewController {
+class TravelHistoryController: UIViewController {
 
     var travelMapView: NTMapView?
     
     @IBOutlet weak var travelMapUIV: UIView!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         loadMap()
-        // Do any additional setup after loading the view.
     }
     
     func loadMap(){
         
         travelMapView = NTMapView(frame: travelMapUIV.bounds)
+        
         guard let unwrappedMapView = travelMapView else {
+            
             print("Map does not load")
             return
         }
-
+        
         let neshan = NTNeshanServices.createBaseMap(NTNeshanMapStyle.NESHAN)
         unwrappedMapView.getLayers().add(neshan)
 

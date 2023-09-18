@@ -1,16 +1,10 @@
-//
-//  MapVC.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
+
 import UIKit
 
-class MapVC: UIViewController {
+class MapController: UIViewController {
     
-    var mapModel: MapModel?
     var mapView: NTMapView?
-    var startingTrip : StartingTripFlow = StartingTripFlow()
+    var startingTrip : StartingTripFlowController = StartingTripFlowController()
     
     @IBOutlet weak var mapContainerView: UIView!
     
@@ -25,7 +19,6 @@ class MapVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
     func loadMap() {
         
         mapView = NTMapView(frame: mapContainerView.bounds)
@@ -35,6 +28,7 @@ class MapVC: UIViewController {
             print("Map view is not initialized")
             return
         }
+        
         let neshan = NTNeshanServices.createBaseMap(NTNeshanMapStyle.NESHAN)
         unwrappedMapView.getLayers().add(neshan)
         
@@ -52,21 +46,8 @@ class MapVC: UIViewController {
     }
    
     @IBAction func startTripClicked(_ sender: Any) {
+        
         startingTrip.showNameInputNotification(on: self)
-       // Notifications.showNameInputNotification(on: self)
     }
     
-    func longPressOnMap (){
-                    
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action:#selector(viewLongPressed(_:)))
-        mapContainerView.addGestureRecognizer(longPressGesture)
-    }
-
-    @objc func viewLongPressed(_ sender: UILongPressGestureRecognizer) {
-        
-        if sender.state == .began {
-            
-            print("View long-pressed!")
-        }
-    }
 }

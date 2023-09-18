@@ -1,9 +1,3 @@
-//
-//  TravelM.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
 
 struct TravalInformation : Encodable, Decodable{
     
@@ -39,8 +33,6 @@ struct TravalInformation : Encodable, Decodable{
         
         return self.tripName
     }
-    func setTrip(){
-        
-    }
+    
     
 }

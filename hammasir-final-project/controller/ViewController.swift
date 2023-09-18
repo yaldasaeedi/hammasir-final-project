@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/21/1402 AP.
-//
+
 
 import UIKit
 

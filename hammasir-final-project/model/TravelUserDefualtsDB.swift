@@ -1,9 +1,3 @@
-//
-//  TravelUserDefualtsDB.swift
-//  hammasir-final-project
-//
-//  Created by yalda saeedi on 6/26/1402 AP.
-//
 
 import Foundation
 
@@ -15,13 +9,13 @@ protocol TravelStorage {
 
 class TravelUserDefualtsDB : TravelStorage{
     
-    
     private let userDefaults = UserDefaults.standard
     private var storageKey: String
     
     init(storageKey: String) {
         self.storageKey = storageKey
     }
+    
     func saveTravel(_ travel: TravalInformation) {
         
         let savedTravel = fetchTravels()
