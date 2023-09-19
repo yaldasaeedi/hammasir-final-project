@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string>neshan.neshanMap</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Access to location required</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Access to location required</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

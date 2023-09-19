@@ -7,8 +7,10 @@ struct TravalInformation : Encodable, Decodable{
     private var destinationLng : Double
     private var fellowTraveler : [ContactInformation]
     private var tripName : String
+    private var formattedAddress : String
     
-    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String) {
+    
+    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String, formattedAddress : String) {
         
         self.originLat = originLat
         self.originLng = originLng
@@ -16,6 +18,7 @@ struct TravalInformation : Encodable, Decodable{
         self.destinationLng = destinationLng
         self.fellowTraveler = fellowTraveler
         self.tripName = tripName
+        self.formattedAddress = formattedAddress
     }
     
     func getOriginLat() -> Double{
@@ -46,6 +49,11 @@ struct TravalInformation : Encodable, Decodable{
     func getTripName() -> String{
         
         return self.tripName
+    }
+    
+    func getFormattedAddress() -> String{
+        
+        return self.formattedAddress
     }
     
     

@@ -50,14 +50,15 @@ class tripModel {
         return self.tripStorage
     }
     
-    func addNewTrip(newOriginLat: Double, newOriginLng: Double, newDestinationLat: Double, newDestinationLng: Double, newFellowTraveler: [ContactInformation], newTripName: String){
+    func addNewTrip(newOriginLat: Double, newOriginLng: Double, newDestinationLat: Double, newDestinationLng: Double, newFellowTraveler: [ContactInformation], newTripName: String, newFormattedAddress: String){
         
         let newTrip : TravalInformation = TravalInformation(originLat: newOriginLat,
                                                             originLng: newOriginLng,
                                                             destinationLat: newDestinationLat,
                                                             destinationLng: newDestinationLng,
                                                             fellowTraveler: newFellowTraveler,
-                                                            tripName: newTripName)
+                                                            tripName: newTripName,
+                                                            formattedAddress: newFormattedAddress)
         self.tripStorage.saveTravel(newTrip)
     }
     

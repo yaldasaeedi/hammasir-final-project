@@ -1,15 +1,24 @@
 import Foundation
 
+class TripData {
+    
+    static let shared = TripData()
+    
+    var tripName : String = ""
+    var originLng: Double = 0.0
+    var originLat: Double = 0.0
+    var destinationLng: Double = 0.0
+    var destinationLat: Double = 0.0
+    var fellowTravelers : [ContactInformation] = []
+    var formattedAddress: String = ""
+    
+    private init() {}
+}
+
 class StartingTripFlowController{
     
     var tripsModel = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
     
-    var tripName : String?
-    var originLng : Double?
-    var originLat : Double?
-    var destinationLng : Double?
-    var destinationLat : Double?
-    var fellowTravelers : [ContactInformation]?
     
     func showNameInputNotification(on viewController: UIViewController) {
         
@@ -24,7 +33,7 @@ class StartingTripFlowController{
 
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let nameTextField = alertController.textFields?.first, let name = nameTextField.text {
-                self.tripName = name
+                TripData.shared.tripName = name
                 // entekhab mabda ba maghsad
                 self.showYesNoNotificationForContact(on: viewController)
                 print("User's trip name is \(name)")
@@ -42,13 +51,18 @@ class StartingTripFlowController{
     
     // entekhab mabda ba maghsad
     
-    func getLngLatForOriginAndDestination(){
-        
-        
-        
-        //showYesNoNotificationForTrip(on: )
-    }
-
+    static func getDataFromMapController(newOriginLng: Double,
+                                             newOriginLat: Double,
+                                             newDestinationLng: Double,
+                                             newDestinationLat: Double,
+                                             newFormattedAddress: String,
+                                             newViewController: UIViewController) {
+            TripData.shared.originLng = newOriginLng
+            TripData.shared.originLat = newOriginLat
+            TripData.shared.destinationLng = newDestinationLng
+            TripData.shared.destinationLat = newDestinationLat
+            TripData.shared.formattedAddress = newFormattedAddress
+        }
     func showYesNoNotificationForTrip(on viewController: UIViewController) {
         
         let alertController = UIAlertController(title: "Notification",
@@ -120,11 +134,12 @@ class StartingTripFlowController{
     
     func tripIsAdding() {
         
-        self.tripsModel.addNewTrip(newOriginLat: self.originLat!,
-                                   newOriginLng: self.originLng!,
-                                   newDestinationLat: self.destinationLat!,
-                                   newDestinationLng: self.destinationLng!,
-                                   newFellowTraveler: self.fellowTravelers!,
-                                   newTripName: self.tripName!)
+        self.tripsModel.addNewTrip(newOriginLat: TripData.shared.originLat,
+                                   newOriginLng: TripData.shared.originLng,
+                                   newDestinationLat: TripData.shared.destinationLat,
+                                   newDestinationLng: TripData.shared.destinationLng,
+                                   newFellowTraveler: TripData.shared.fellowTravelers,
+                                   newTripName: TripData.shared.tripName,
+                                   newFormattedAddress: TripData.shared.formattedAddress)
     }
 }

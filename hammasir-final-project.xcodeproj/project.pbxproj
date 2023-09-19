@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5032A332AB8E37E00EF2008 /* userOriginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5032A322AB8E37E00EF2008 /* userOriginController.swift */; };
-		B5032A352AB8E3A400EF2008 /* UserDestinationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5032A342AB8E3A400EF2008 /* UserDestinationController.swift */; };
 		B52965D42AB847FF00318081 /* StartingTripFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965D32AB847FF00318081 /* StartingTripFlowController.swift */; };
 		B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965DA2AB8599900318081 /* TableViewForSelectController.swift */; };
-		B58251822AB975840071AEC3 /* MarkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58251812AB975840071AEC3 /* MarkerController.swift */; };
 		B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B58251832AB977E20071AEC3 /* NeshanHelper.m */; };
 		B5F265602AB785DE00949BB7 /* TravelUserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */; };
 		E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386C2AB18E970029C049 /* ContactInformation.swift */; };
@@ -60,11 +57,8 @@
 		1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
 		6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5032A322AB8E37E00EF2008 /* userOriginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userOriginController.swift; sourceTree = "<group>"; };
-		B5032A342AB8E3A400EF2008 /* UserDestinationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDestinationController.swift; sourceTree = "<group>"; };
 		B52965D32AB847FF00318081 /* StartingTripFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTripFlowController.swift; sourceTree = "<group>"; };
 		B52965DA2AB8599900318081 /* TableViewForSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForSelectController.swift; sourceTree = "<group>"; };
-		B58251812AB975840071AEC3 /* MarkerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerController.swift; sourceTree = "<group>"; };
 		B58251832AB977E20071AEC3 /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
 		B58251852AB9780E0071AEC3 /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
 		B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelUserDefualtsDB.swift; sourceTree = "<group>"; };
@@ -164,9 +158,6 @@
 				E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */,
 				B52965D32AB847FF00318081 /* StartingTripFlowController.swift */,
 				B52965DA2AB8599900318081 /* TableViewForSelectController.swift */,
-				B5032A322AB8E37E00EF2008 /* userOriginController.swift */,
-				B5032A342AB8E3A400EF2008 /* UserDestinationController.swift */,
-				B58251812AB975840071AEC3 /* MarkerController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -388,7 +379,6 @@
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
 				E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */,
 				E0B962F52AB10B2900C15974 /* TravelHistoryTableController.swift in Sources */,
-				B5032A332AB8E37E00EF2008 /* userOriginController.swift in Sources */,
 				E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */,
 				E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */,
 				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
@@ -399,14 +389,12 @@
 				E0B963522AB1118600C15974 /* TripModel.swift in Sources */,
 				B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
-				B58251822AB975840071AEC3 /* MarkerController.swift in Sources */,
 				E0B962EF2AB1089800C15974 /* TravelHistoryController.swift in Sources */,
 				E0B962F12AB108AD00C15974 /* ContactController.swift in Sources */,
 				E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */,
 				B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */,
 				E0B963502AB1117400C15974 /* TravelInformation.swift in Sources */,
 				E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */,
-				B5032A352AB8E3A400EF2008 /* UserDestinationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

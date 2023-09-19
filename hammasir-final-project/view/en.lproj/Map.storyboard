@@ -35,26 +35,35 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="41.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=" ">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="maximizeClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="QJ8-DG-QB4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-pF-J6o">
                                                         <rect key="frame" x="143.33333333333331" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" title=" ">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="minimizeClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="qzg-Ca-U2V"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVU-bQ-tPD">
                                                         <rect key="frame" x="286.66666666666669" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title=" " imagePadding="0.0">
                                                             <imageReference key="image" image="paperplane" catalog="system" variableValue="0.0"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="focusOnUserLocation:" destination="s0l-2h-YRn" eventType="touchUpInside" id="QBM-FQ-QAn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -80,6 +89,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="Anh-4z-RBh">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ble-xV-rVO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jwx-38-x8V">
+                                <rect key="frame" x="302.33333333333331" y="1.3333333333333321" width="107.66666666666669" height="41.666666666666671"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DoneOnClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="0bO-Tz-NBU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentLocationBTN" destination="NVU-bQ-tPD" id="spa-hZ-xEl"/>
