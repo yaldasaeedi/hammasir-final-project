@@ -2,7 +2,14 @@ import Foundation
 
 class StartingTripFlowController{
     
-    static var tripName : String?
+    var tripsModel = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
+    
+    var tripName : String?
+    var originLng : Double?
+    var originLat : Double?
+    var destinationLng : Double?
+    var destinationLat : Double?
+    var fellowTravelers : [ContactInformation]?
     
     func showNameInputNotification(on viewController: UIViewController) {
         
@@ -17,7 +24,8 @@ class StartingTripFlowController{
 
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             if let nameTextField = alertController.textFields?.first, let name = nameTextField.text {
-                StartingTripFlowController.tripName = name
+                self.tripName = name
+                // entekhab mabda ba maghsad
                 self.showYesNoNotificationForContact(on: viewController)
                 print("User's trip name is \(name)")
             }
@@ -34,6 +42,12 @@ class StartingTripFlowController{
     
     // entekhab mabda ba maghsad
     
+    func getLngLatForOriginAndDestination(){
+        
+        
+        
+        //showYesNoNotificationForTrip(on: )
+    }
 
     func showYesNoNotificationForTrip(on viewController: UIViewController) {
         
@@ -68,6 +82,7 @@ class StartingTripFlowController{
                 print("bundel did not resived")
                 return
             }
+            
             let storyboard = UIStoryboard(name: "TravelList", bundle: bundle)
             let myViewController = storyboard.instantiateViewController(withIdentifier: "TableViewForSelect") as! TableViewForSelectController
             viewController.present(myViewController, animated: true, completion: nil)
@@ -80,5 +95,36 @@ class StartingTripFlowController{
         alertController.addAction(noAction)
         
         viewController.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showYesNoNotificationForSavingTrip(on viewController: UIViewController) {
+        
+        let alertController = UIAlertController(title: "Notification",
+                                                message: "Do you  want to save your trip?",
+                                                preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+            
+            self.tripIsAdding()
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
+        
+        }
+        
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        
+        viewController.present(alertController, animated: true, completion: nil)
+    }
+    
+    func tripIsAdding() {
+        
+        self.tripsModel.addNewTrip(newOriginLat: self.originLat!,
+                                   newOriginLng: self.originLng!,
+                                   newDestinationLat: self.destinationLat!,
+                                   newDestinationLng: self.destinationLng!,
+                                   newFellowTraveler: self.fellowTravelers!,
+                                   newTripName: self.tripName!)
     }
 }

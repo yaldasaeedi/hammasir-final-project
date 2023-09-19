@@ -3,7 +3,7 @@ import Foundation
 
 class tripModel {
     
-    var tripStorage : TravelStorage
+    private var tripStorage : TravelStorage
     
     init(tripStorage: TravelStorage) {
         
@@ -25,22 +25,39 @@ class tripModel {
         return self.tripStorage.fetchTravels().map { $0.getFellowTraveler() }
     }
     
-    func getOriginTrip() -> [Double]{
+    func getOriginTripLat() -> [Double]{
         
-        return self.tripStorage.fetchTravels().map{ $0.getOrigin()}
+        return self.tripStorage.fetchTravels().map{ $0.getOriginLat()}
     }
     
-    func getDestination() -> [Double]{
+    func getOriginTripLng() -> [Double]{
         
-        return self.tripStorage.fetchTravels().map{ $0.getDestination()}
+        return self.tripStorage.fetchTravels().map{ $0.getOriginLng()}
     }
     
-    func addNewTrip( newName : String, newFellowTravelers : [ContactInformation], newOrigin : Double, newDestination : Double ){
+    func getDestinationLat() -> [Double]{
         
-        let newTrip : TravalInformation = TravalInformation(origin: newOrigin,
-                                                            destination: newDestination,
-                                                            fellowTraveler: newFellowTravelers,
-                                                            tripName: newName)
+        return self.tripStorage.fetchTravels().map{ $0.getDestinationLat()}
+    }
+    
+    func getDestinationLng() -> [Double]{
+        
+        return self.tripStorage.fetchTravels().map{ $0.getDestinationLng()}
+    }
+    
+    func getTripStorage() -> TravelStorage{
+        
+        return self.tripStorage
+    }
+    
+    func addNewTrip(newOriginLat: Double, newOriginLng: Double, newDestinationLat: Double, newDestinationLng: Double, newFellowTraveler: [ContactInformation], newTripName: String){
+        
+        let newTrip : TravalInformation = TravalInformation(originLat: newOriginLat,
+                                                            originLng: newOriginLng,
+                                                            destinationLat: newDestinationLat,
+                                                            destinationLng: newDestinationLng,
+                                                            fellowTraveler: newFellowTraveler,
+                                                            tripName: newTripName)
         self.tripStorage.saveTravel(newTrip)
     }
     

@@ -48,8 +48,10 @@ class ContactsManager: ContactReader, ContactWriter {
     }
     
     func getContactStorage() -> ContactStorage {
+        
         return self.contactStorage
     }
+    
     func addContact(newName: String, newNumber: Int64, newEmail: String, newImage: Data, newBirthday: Date, newNote: String, newIsChecked: Bool) {
         
         let newContact = ContactInformation(name: newName,

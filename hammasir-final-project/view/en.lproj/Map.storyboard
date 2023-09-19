@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,93 +18,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="582" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
-                                <rect key="frame" x="0.0" y="107" width="430" height="791"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
+                                <rect key="frame" x="0.0" y="103" width="430" height="742.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-8r-i67">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="791"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="692.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ARR-7w-n7c">
+                                        <rect key="frame" x="0.0" y="700.66666666666663" width="430" height="41.666666666666629"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-0S-IlQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="41.666666666666664"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDA-0o-FKs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=" ">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-pF-J6o">
+                                                        <rect key="frame" x="143.33333333333331" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" title=" ">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVU-bQ-tPD">
+                                                        <rect key="frame" x="286.66666666666669" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title=" " imagePadding="0.0">
+                                                            <imageReference key="image" image="paperplane" catalog="system" variableValue="0.0"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="black"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="xtx-pF-J6o" firstAttribute="width" secondItem="qDA-0o-FKs" secondAttribute="width" id="2Pc-ay-E3t"/>
+                                                    <constraint firstItem="NVU-bQ-tPD" firstAttribute="width" secondItem="xtx-pF-J6o" secondAttribute="width" id="86k-6k-XuE"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="KHF-8r-i67" firstAttribute="width" secondItem="TOi-Yl-9rG" secondAttribute="width" id="6vy-SB-yl6"/>
-                                    <constraint firstItem="KHF-8r-i67" firstAttribute="width" secondItem="TOi-Yl-9rG" secondAttribute="width" id="HL9-FI-4ib"/>
-                                    <constraint firstItem="KHF-8r-i67" firstAttribute="height" secondItem="TOi-Yl-9rG" secondAttribute="height" id="JKb-Ih-Aaw"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JsE-py-LqD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="UbB-SA-CfF"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="bottom" secondItem="JsE-py-LqD" secondAttribute="bottom" id="VgT-gr-SUq"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="centerX" secondItem="5BV-l5-aEr" secondAttribute="centerX" id="mPe-5F-uod"/>
-                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="height" secondItem="JsE-py-LqD" secondAttribute="height" multiplier="0.994969" id="n29-o9-xYK"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="centerX" secondItem="5BV-l5-aEr" secondAttribute="centerX" id="GjX-Ib-CAw"/>
+                            <constraint firstItem="JsE-py-LqD" firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" constant="52.666666666666629" id="VXZ-IY-06i"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="XYD-dn-mZm"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="kEm-eG-YCA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Anh-4z-RBh">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="vPb-Om-ajL">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wIN-hv-iyV">
-                                <rect key="frame" x="20" y="4.6666666666666679" width="105" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Start a trip"/>
-                                <connections>
-                                    <action selector="startTripClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="Ecn-Aw-ssJ"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6o8-tH-2ox">
-                            <rect key="frame" x="151" y="4.6666666666666679" width="128" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Trip history"/>
-                            <connections>
-                                <segue destination="3eT-xP-2hY" kind="show" id="yPv-KB-JHN"/>
-                            </connections>
-                        </button>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ab9-up-3Fy">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ElO-aT-aPY">
-                                <rect key="frame" x="294" y="4.6666666666666679" width="116" height="34.666666666666657"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Contact List"/>
-                                <connections>
-                                    <segue destination="RTn-yD-5jg" kind="show" id="DAv-Tj-RGf"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentLocationBTN" destination="NVU-bQ-tPD" id="spa-hZ-xEl"/>
                         <outlet property="mapContainerView" destination="KHF-8r-i67" id="dLr-0j-EPf"/>
+                        <outlet property="maximizeBTN" destination="qDA-0o-FKs" id="zL8-fo-Jzx"/>
+                        <outlet property="minimizeBTN" destination="xtx-pF-J6o" id="p15-T7-IhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5577.5390625" y="62.371888726207899"/>
-        </scene>
-        <!--TripHistory-->
-        <scene sceneID="nVC-Gh-SEI">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TravelList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="TripHistory" id="3eT-xP-2hY" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ZGp-5G-wh8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oUZ-9V-egX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6186" y="78"/>
-        </scene>
-        <!--ContactList-->
-        <scene sceneID="ogQ-LQ-PsB">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ContactList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="ContactList" id="RTn-yD-5jg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hlA-Dc-x5v"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKR-qw-kzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6186" y="45"/>
+            <point key="canvasLocation" x="5577.2093023255811" y="61.802575107296143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qF-u5-SwJ">
@@ -124,6 +112,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.89294056056701032" green="0.76959455501863672" blue="0.79546665648498305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,27 +1,41 @@
 
 struct TravalInformation : Encodable, Decodable{
     
-    private var origin : Double
-    private var destination : Double
+    private var originLat : Double
+    private var originLng : Double
+    private var destinationLat : Double
+    private var destinationLng : Double
     private var fellowTraveler : [ContactInformation]
     private var tripName : String
     
-    init(origin: Double, destination: Double, fellowTraveler: [ContactInformation], tripName: String) {
+    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String) {
         
-        self.origin = origin
-        self.destination = destination
+        self.originLat = originLat
+        self.originLng = originLng
+        self.destinationLat = destinationLat
+        self.destinationLng = destinationLng
         self.fellowTraveler = fellowTraveler
         self.tripName = tripName
     }
     
-    func getOrigin() -> Double{
+    func getOriginLat() -> Double{
         
-        return self.origin
+        return self.originLat
     }
     
-    func getDestination() -> Double{
+    func getOriginLng() -> Double{
         
-        return self.destination
+        return self.originLng
+    }
+    
+    func getDestinationLat() -> Double{
+        
+        return self.destinationLat
+    }
+    
+    func getDestinationLng() -> Double{
+        
+        return self.destinationLng
     }
     
     func getFellowTraveler() -> [ContactInformation]{

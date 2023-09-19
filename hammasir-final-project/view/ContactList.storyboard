@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +46,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="131" height="28"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="New"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="New">
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="8lG-DJ-Lej" kind="show" identifier="contactInfoAdded" id="ohU-ZI-huM"/>
                                                         </connections>
@@ -167,7 +171,9 @@
                                             <constraint firstAttribute="height" constant="40" id="oc2-wg-pp4"/>
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="28" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="add Photo" buttonSize="large"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="add Photo" buttonSize="large">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="addingContactPhoto:" destination="8lG-DJ-Lej" eventType="touchUpInside" id="h6W-2Z-zLg"/>
                                         </connections>
@@ -177,14 +183,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n62-xw-DcN">
                                                 <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="39"/>
-                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAl-5d-yFr">
                                                 <rect key="frame" x="93.666666666666657" y="0.0" width="279.33333333333337" height="39"/>
-                                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -198,14 +204,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-Q1-Izh">
                                                 <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="39.333333333333336"/>
-                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-GS-BLt">
                                                 <rect key="frame" x="93.666666666666657" y="0.0" width="279.33333333333337" height="39.333333333333336"/>
-                                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -219,14 +225,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-Id-tdh">
                                                 <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="39"/>
-                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Sf-Rsm">
                                                 <rect key="frame" x="93.666666666666657" y="0.0" width="279.33333333333337" height="39"/>
-                                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -240,14 +246,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-tx-PJf">
                                                 <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="39"/>
-                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1sz-tt-Zqy">
                                                 <rect key="frame" x="93.666666666666657" y="0.0" width="279.33333333333337" height="39"/>
-                                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <connections>
                                                     <action selector="addingContactBirthdat:" destination="8lG-DJ-Lej" eventType="valueChanged" id="bc9-Gn-2Rp"/>
                                                 </connections>
@@ -259,14 +265,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fp-hq-UV4">
                                                 <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="39.333333333333336"/>
-                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eS8-KF-Pbe">
                                                 <rect key="frame" x="93.666666666666657" y="0.0" width="279.33333333333337" height="39.333333333333336"/>
-                                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -282,7 +288,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-Rj-nAA">
                                         <rect key="frame" x="0.0" y="656" width="373" height="39"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="done"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="done">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="contactInfoAdded:" destination="8lG-DJ-Lej" eventType="touchUpInside" id="YpX-OP-m2d"/>
                                         </connections>
@@ -352,11 +360,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="341.33334350585938" height="341.33334350585938"/>
+        <namedColor name="AccentColor">
+            <color red="0.89294056056701032" green="0.76959455501863672" blue="0.79546665648498305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
