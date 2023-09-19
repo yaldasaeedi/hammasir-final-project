@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-struct ContactInformation : Decodable, Encodable{
+struct ContactInformation : Codable{
     
     private var name : String
     private var number : Int64

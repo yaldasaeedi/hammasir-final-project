@@ -18,8 +18,7 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     var animSt = NTAnimationStyle()
     var userLocation: CLLocation!
     var locationManager: CLLocationManager!
-    
-    
+    var zoomNumber : Float = 13
     let lastUpdateTime = NSString()
     let mRequestingLocationUpdates = Bool()
     
@@ -62,16 +61,18 @@ class MapController: UIViewController, CLLocationManagerDelegate {
         let neshan = NTNeshanServices.createBaseMap(NTNeshanMapStyle.NESHAN)
         unwrappedMapView.getLayers().add(neshan)
         
-      
         markerLayer = NTNeshanServices.createVectorElementLayer()
         unwrappedMapView.getLayers().add(markerLayer)
+        
         userMarkerLayer = NTNeshanServices.createVectorElementLayer()
         unwrappedMapView.getLayers()?.add(userMarkerLayer)
+        
         unwrappedMapView.setFocalPointPosition(NTLngLat(x: 59.2, y: 36.5), durationSeconds: 0.4)
-        unwrappedMapView.setZoom(13, durationSeconds: 0.4)
+        unwrappedMapView.setZoom(zoomNumber, durationSeconds: 0.4)
         mapContainerView.addSubview(unwrappedMapView)
         unwrappedMapView.frame = mapContainerView.bounds
         unwrappedMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
     }
     func initLocation() {
         // Create a location manager
@@ -109,8 +110,6 @@ class MapController: UIViewController, CLLocationManagerDelegate {
         mapEventListener?.onMapClickedBlock =  {clickInfo in
             if clickInfo.getClickType() == NTClickType.CLICK_TYPE_LONG {
                 let clickedLocation = clickInfo.getClickPos()
-                print("clicked")
-                print(clickedLocation)
                 self.addMarker(loc: clickedLocation!)
                 self.xDestination = clickedLocation?.getX()
                 self.yDestination = clickedLocation?.getY()
@@ -195,13 +194,25 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func DoneOnClicked(_ sender: Any) {
-        
+        self.accessSharedData()
+        startingTrip.showNameInputNotification(on: self)
     }
     
     @IBAction func minimizeClicked(_ sender: Any) {
         
+        if zoomNumber > 1 {
+            
+            zoomNumber -= 1
+            mapView?.setZoom(zoomNumber, durationSeconds: 0.4)
+        }
     }
+
     @IBAction func maximizeClicked(_ sender: Any) {
         
+        if zoomNumber < 20 {
+            
+            zoomNumber += 1
+            mapView?.setZoom(zoomNumber, durationSeconds: 0.4)
+        }
     }
 }

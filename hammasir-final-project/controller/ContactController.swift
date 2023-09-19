@@ -86,13 +86,6 @@ extension ContactController : UITableViewDelegate, UITableViewDataSource {
             imageView.image = resizedImage
         }
         
-        if contact.getIsChecked() == true {
-            
-            cell.accessoryType = .checkmark
-        }else{
-            
-            cell.accessoryType = .none
-        }
         
         return cell
     }

@@ -10,7 +10,7 @@ class TripData {
     var destinationLng: Double = 0.0
     var destinationLat: Double = 0.0
     var fellowTravelers : [ContactInformation] = []
-    var formattedAddress: String = ""
+    var formattedAddress: String = "bbb"
     
     private init() {}
 }
@@ -18,7 +18,7 @@ class TripData {
 class StartingTripFlowController{
     
     var tripsModel = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
-    
+
     
     func showNameInputNotification(on viewController: UIViewController) {
         
@@ -51,37 +51,38 @@ class StartingTripFlowController{
     
     // entekhab mabda ba maghsad
     
-    static func getDataFromMapController(newOriginLng: Double,
-                                             newOriginLat: Double,
-                                             newDestinationLng: Double,
-                                             newDestinationLat: Double,
-                                             newFormattedAddress: String,
-                                             newViewController: UIViewController) {
-            TripData.shared.originLng = newOriginLng
-            TripData.shared.originLat = newOriginLat
-            TripData.shared.destinationLng = newDestinationLng
-            TripData.shared.destinationLat = newDestinationLat
-            TripData.shared.formattedAddress = newFormattedAddress
-        }
-    func showYesNoNotificationForTrip(on viewController: UIViewController) {
-        
-        let alertController = UIAlertController(title: "Notification",
-                                                message: "Are you sure you want to add this Trip?",
-                                                preferredStyle: .alert)
-        
-        let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
-            
-            self.showYesNoNotificationForContact(on : viewController )
-        }
-        
-        let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
-        }
-        
-        alertController.addAction(yesAction)
-        alertController.addAction(noAction)
-        
-        viewController.present(alertController, animated: true, completion: nil)
-    }
+//    func getDataFromMapController(newOriginLng: Double,
+//                                             newOriginLat: Double,
+//                                             newDestinationLng: Double,
+//                                             newDestinationLat: Double,
+//                                             newFormattedAddress: String,
+//                                             newViewController: UIViewController) {
+//            TripData.shared.originLng = newOriginLng
+//            TripData.shared.originLat = newOriginLat
+//            TripData.shared.destinationLng = newDestinationLng
+//            TripData.shared.destinationLat = newDestinationLat
+//            TripData.shared.formattedAddress = newFormattedAddress
+//        tripIsAdding()
+//        }
+//    func showYesNoNotificationForTrip(on viewController: UIViewController) {
+//
+//        let alertController = UIAlertController(title: "Notification",
+//                                                message: "Are you sure you want to add this Trip?",
+//                                                preferredStyle: .alert)
+//
+//        let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+//
+//            self.showYesNoNotificationForContact(on : viewController )
+//        }
+//
+//        let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
+//        }
+//
+//        alertController.addAction(yesAction)
+//        alertController.addAction(noAction)
+//
+//        viewController.present(alertController, animated: true, completion: nil)
+//    }
     
     func showYesNoNotificationForContact(on viewController: UIViewController) {
         
@@ -99,7 +100,9 @@ class StartingTripFlowController{
             
             let storyboard = UIStoryboard(name: "TravelList", bundle: bundle)
             let myViewController = storyboard.instantiateViewController(withIdentifier: "TableViewForSelect") as! TableViewForSelectController
+            
             viewController.present(myViewController, animated: true, completion: nil)
+            
         }
         
         let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
@@ -119,7 +122,19 @@ class StartingTripFlowController{
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
             
+            guard let bundle = Bundle(identifier: "neshan.neshanMap") else {
+                
+                print("bundel did not resived")
+                return
+            }
+            
+            let storyboard = UIStoryboard(name: "TravelList", bundle: bundle)
+            let myViewController = storyboard.instantiateViewController(withIdentifier: "TripHistory") as! TravelHistoryTableController
+            
+            viewController.present(myViewController, animated: true, completion: nil)
+            
             self.tripIsAdding()
+            
         }
         
         let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
@@ -141,5 +156,9 @@ class StartingTripFlowController{
                                    newFellowTraveler: TripData.shared.fellowTravelers,
                                    newTripName: TripData.shared.tripName,
                                    newFormattedAddress: TripData.shared.formattedAddress)
+        
+        print(tripsModel.gettripsHistory())
+
+
     }
 }

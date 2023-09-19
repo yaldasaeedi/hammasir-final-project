@@ -1,5 +1,5 @@
 
-struct TravalInformation : Encodable, Decodable{
+struct TravalInformation : Codable{
     
     private var originLat : Double
     private var originLng : Double

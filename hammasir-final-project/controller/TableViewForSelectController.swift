@@ -6,7 +6,8 @@ class TableViewForSelectController: UITableViewController {
     
     var selectedIndexPath: IndexPath?
     var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
-    
+    var startingTrip : StartingTripFlowController = StartingTripFlowController()
+
     static var fellowTravelerName : [String]?
     
     override func viewDidLoad() {
@@ -79,9 +80,19 @@ class TableViewForSelectController: UITableViewController {
             
             if checkedContact.getIsChecked() == true {
                 
-                TableViewForSelectController.fellowTravelerName?.append(checkedContact.getContactName())
-                dismiss(animated: true, completion: nil)
+                TripData.shared.fellowTravelers.append(checkedContact)
+                startingTrip.showYesNoNotificationForSavingTrip(on: self)
                 
+//                dismiss(animated: true) {
+//                    guard let bundle = Bundle(identifier: "neshan.neshanMap") else {
+//
+//                        print("bundel did not resived")
+//                        return
+//                    }
+//                    let storyboard = UIStoryboard(name: "TripList", bundle: bundle)
+//                    let anotherViewController = storyboard.instantiateViewController(withIdentifier: "TripHistory")
+//                    self.present(anotherViewController, animated: true, completion: nil)
+//                }
             }
         }
     }
