@@ -10,7 +10,8 @@ class TripData {
     var destinationLng: Double = 0.0
     var destinationLat: Double = 0.0
     var fellowTravelers : [ContactInformation] = []
-    var formattedAddress: String = "bbb"
+    var originFormattedAddress: String = ""
+    var destinationFormattedAddress: String = ""
     
     private init() {}
 }
@@ -148,14 +149,18 @@ class StartingTripFlowController{
     }
     
     func tripIsAdding() {
-        
+        print(TripData.shared.originFormattedAddress)
+        print(TripData.shared.destinationFormattedAddress)
         self.tripsModel.addNewTrip(newOriginLat: TripData.shared.originLat,
                                    newOriginLng: TripData.shared.originLng,
                                    newDestinationLat: TripData.shared.destinationLat,
                                    newDestinationLng: TripData.shared.destinationLng,
                                    newFellowTraveler: TripData.shared.fellowTravelers,
                                    newTripName: TripData.shared.tripName,
-                                   newFormattedAddress: TripData.shared.formattedAddress)
+                                   newOriginFormattedAddress: TripData.shared.originFormattedAddress,
+                                   newDestinationFormattedAddress: TripData.shared.destinationFormattedAddress
+                            
+            )
         
 
     }

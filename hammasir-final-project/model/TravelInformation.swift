@@ -7,10 +7,11 @@ struct TravalInformation : Codable{
     private var destinationLng : Double
     private var fellowTraveler : [ContactInformation]
     private var tripName : String
-    private var formattedAddress : String
+    private var originFormattedAddress : String
+    private var destinationFormattedAddress : String
     
     
-    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String, formattedAddress : String) {
+    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String, originFormattedAddress : String, destinationFormattedAddress : String) {
         
         self.originLat = originLat
         self.originLng = originLng
@@ -18,7 +19,8 @@ struct TravalInformation : Codable{
         self.destinationLng = destinationLng
         self.fellowTraveler = fellowTraveler
         self.tripName = tripName
-        self.formattedAddress = formattedAddress
+        self.originFormattedAddress = originFormattedAddress
+        self.destinationFormattedAddress = destinationFormattedAddress
     }
     
     func getOriginLat() -> Double{
@@ -51,10 +53,14 @@ struct TravalInformation : Codable{
         return self.tripName
     }
     
-    func getFormattedAddress() -> String{
+    func getOriginFormattedAddress() -> String{
         
-        return self.formattedAddress
+        return self.originFormattedAddress
     }
-    
+    func getDestinationFormattedAddress() -> String{
+        
+        return self.destinationFormattedAddress
+    }
+
     
 }

@@ -186,27 +186,31 @@ class MapController: UIViewController, CLLocationManagerDelegate {
         TripData.shared.originLat = yOrigin
         TripData.shared.destinationLng = xDestination
         TripData.shared.destinationLat = yDestination
-        APIrequest().getTheAddress(latitude: xOrigin, longitude: yOrigin) { address in
+        let apiRequest = APIrequest()
+
+        apiRequest.getTheAddress(latitude: xOrigin, longitude: yOrigin) { address in
             if let address = address {
-                print("Formatted Address: \(address)")
-                // Perform any desired actions with the address here
+                print("Formatted Address (Origin): \(address)")
+                TripData.shared.originFormattedAddress = address
             } else {
-                print("Failed to retrieve the address.")
+                print("Failed to retrieve the origin address.")
             }
         }
-        APIRequestForFormatedAddress.getTheAddress(latitude: xDestination, longitude: yDestination){ address in
+
+        apiRequest.getTheAddress(latitude: xDestination, longitude: yDestination) { address in
             if let address = address {
-                print("Formatted Address: \(address)")
-                // Perform any desired actions with the address here
+                print("Formatted Address (Destination): \(address)")
+                // Perform any desired actions with the destination address here
+                TripData.shared.destinationFormattedAddress = address
             } else {
-                print("Failed to retrieve the address.")
+                print("Failed to retrieve the destination address.")
             }
         }
         print(" its in access data")
 //        print(tempFormattedAdrressForOrigin)
 //        print(tempFormattedAdrressForDestination)
 
-        //TripData.shared.formattedAddress = formattedAddress!
+       
     }
     @IBAction func focusOnUserLocation(_ sender: Any) {
         

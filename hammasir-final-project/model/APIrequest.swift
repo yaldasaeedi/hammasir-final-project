@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-
 class APIrequest {
-    
     typealias CompletionHandler = (String?) -> Void
     
     func getTheAddress(latitude: Double, longitude: Double, completion: @escaping CompletionHandler) {
@@ -18,7 +16,9 @@ class APIrequest {
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
-            completion(nil)
+            DispatchQueue.main.async {
+                completion(nil)
+            }
             return
         }
         
@@ -27,22 +27,24 @@ class APIrequest {
         let session = URLSession.shared
         
         let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("Error: \(error)")
+            guard let jsonData = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] else {
                 completion(nil)
-            } else if let data = data {
-                let responseString = String(data: data, encoding: .utf8)
-                print("Response: \(responseString ?? "")")
-                
-                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let results = jsonData["results"] as? [[String: Any]],
-                   let formattedAddress = results[0]["formatted_address"] as? String {
-                    completion(formattedAddress)
-                } else {
-                    completion(nil)
-                }
+                return
             }
+            print("jsonData", jsonData)
+            guard let results = jsonData["results"] as? [[String: Any]] else {
+                completion(nil)
+                return
+            }
+            print("results", results)
+            guard let formattedAddress = results[0]["formatted_address"] as? String else {
+                completion(nil)
+                return
+            }
+            print("formattedAddress", formattedAddress)
+            completion(formattedAddress)
         }
+        
         task.resume()
     }
 }
