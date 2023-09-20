@@ -1,33 +1,46 @@
-//
-//  TravelM.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
 
-struct TravalInformation : Encodable, Decodable{
+struct TravalInformation : Codable{
     
-    private var origin : Double
-    private var destination : Double
+    private var originLat : Double
+    private var originLng : Double
+    private var destinationLat : Double
+    private var destinationLng : Double
     private var fellowTraveler : [ContactInformation]
     private var tripName : String
+    private var originFormattedAddress : String
+    private var destinationFormattedAddress : String
     
-    init(origin: Double, destination: Double, fellowTraveler: [ContactInformation], tripName: String) {
+    
+    init(originLat: Double, originLng: Double, destinationLat: Double, destinationLng: Double, fellowTraveler: [ContactInformation], tripName: String, originFormattedAddress : String, destinationFormattedAddress : String) {
         
-        self.origin = origin
-        self.destination = destination
+        self.originLat = originLat
+        self.originLng = originLng
+        self.destinationLat = destinationLat
+        self.destinationLng = destinationLng
         self.fellowTraveler = fellowTraveler
         self.tripName = tripName
+        self.originFormattedAddress = originFormattedAddress
+        self.destinationFormattedAddress = destinationFormattedAddress
     }
     
-    func getOrigin() -> Double{
+    func getOriginLat() -> Double{
         
-        return self.origin
+        return self.originLat
     }
     
-    func getDestination() -> Double{
+    func getOriginLng() -> Double{
         
-        return self.destination
+        return self.originLng
+    }
+    
+    func getDestinationLat() -> Double{
+        
+        return self.destinationLat
+    }
+    
+    func getDestinationLng() -> Double{
+        
+        return self.destinationLng
     }
     
     func getFellowTraveler() -> [ContactInformation]{
@@ -39,8 +52,15 @@ struct TravalInformation : Encodable, Decodable{
         
         return self.tripName
     }
-    func setTrip(){
+    
+    func getOriginFormattedAddress() -> String{
         
+        return self.originFormattedAddress
     }
+    func getDestinationFormattedAddress() -> String{
+        
+        return self.destinationFormattedAddress
+    }
+
     
 }

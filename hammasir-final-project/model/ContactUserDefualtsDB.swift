@@ -1,9 +1,4 @@
-//
-//  UserDefualtsDB.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
+
 import Foundation
 
 protocol ContactStorage {
@@ -14,6 +9,7 @@ protocol ContactStorage {
     func editContact(_ updatedContact: ContactInformation, at indexPath: IndexPath)
     func updateContactIsChecked(_ isChecked: Bool, at indexPath: IndexPath)
 }
+
 class ContactUserDefaultsDB: ContactStorage {
     
     private let userDefaults = UserDefaults.standard
@@ -100,6 +96,7 @@ class ContactUserDefaultsDB: ContactStorage {
             print("Error occurred while encoding data: \(error)")
         }
     }
+    
     func updateContactIsChecked(_ isChecked: Bool, at indexPath: IndexPath){
         
         var savedContacts = fetchContacts()

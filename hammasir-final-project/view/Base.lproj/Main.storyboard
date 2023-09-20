@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainStoryboard" id="BYZ-38-t0r" customClass="ViewController" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA0-Ca-XT3">
-                                        <rect key="frame" x="0.0" y="71.666666666666629" width="393" height="429"/>
+                                        <rect key="frame" x="0.0" y="71.666666666666657" width="393" height="321.66666666666674"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Hi! 
@@ -41,19 +41,33 @@ Click on the desired butten to continue.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYL-9T-Dde">
-                                        <rect key="frame" x="0.0" y="500.66666666666663" width="393" height="107"/>
+                                        <rect key="frame" x="0.0" y="393.33333333333337" width="393" height="107.33333333333331"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Starting a trip"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Starting a trip">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="VZF-Hb-jhv" kind="show" id="Lbo-ni-0RQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrK-3U-HYK">
-                                        <rect key="frame" x="0.0" y="607.66666666666663" width="393" height="107.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="500.66666666666663" width="393" height="107"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="History of my trips"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="History of my trips">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="iEG-Fh-cqo" kind="show" id="wmB-QI-0VU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjI-Ed-qji">
+                                        <rect key="frame" x="0.0" y="607.66666666666663" width="393" height="107.33333333333337"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Contact List">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Net-H7-7bU" kind="show" id="dEw-EC-IiT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,6 +76,7 @@ Click on the desired butten to continue.</string>
                                     <constraint firstItem="OYL-9T-Dde" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.15" id="92I-Cv-Zhq"/>
                                     <constraint firstItem="44S-ja-T1F" firstAttribute="height" secondItem="sYk-Gx-GDk" secondAttribute="height" multiplier="0.1" id="K6N-QT-GC9"/>
                                     <constraint firstItem="KrK-3U-HYK" firstAttribute="height" secondItem="OYL-9T-Dde" secondAttribute="height" id="Kw8-7H-NzP"/>
+                                    <constraint firstItem="BjI-Ed-qji" firstAttribute="height" secondItem="KrK-3U-HYK" secondAttribute="height" id="XiH-Bv-Kob"/>
                                     <constraint firstItem="44S-ja-T1F" firstAttribute="width" secondItem="sYk-Gx-GDk" secondAttribute="width" id="vf6-3Q-4hW"/>
                                 </constraints>
                             </stackView>
@@ -93,7 +108,7 @@ Click on the desired butten to continue.</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCa-kW-APM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1453" y="-19"/>
+            <point key="canvasLocation" x="1509" y="-36"/>
         </scene>
         <!--TripHistory-->
         <scene sceneID="i3E-nY-9Ca">
@@ -103,7 +118,7 @@ Click on the desired butten to continue.</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zff-nC-EwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="15"/>
+            <point key="canvasLocation" x="1509" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JEB-cr-UGy">
@@ -123,8 +138,21 @@ Click on the desired butten to continue.</string>
             </objects>
             <point key="canvasLocation" x="34" y="-2"/>
         </scene>
+        <!--ContactList-->
+        <scene sceneID="tPR-WO-L1W">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactList" bundleIdentifier="neshan.neshanMap" referencedIdentifier="ContactList" id="Net-H7-7bU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Hq-fF-lsK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t55-N9-UxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="33"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.89300000667572021" green="0.76999998092651367" blue="0.79500001668930054" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

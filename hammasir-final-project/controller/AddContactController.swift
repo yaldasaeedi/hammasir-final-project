@@ -1,16 +1,3 @@
-//
-//  AddContactVC.swift
-//  hammasir-final-project
-//
-//  Created by Helen Besharatian on 6/22/1402 AP.
-//
-//
-//  ViewControllerForAddContact.swift
-//  Contact List
-//
-//  Created by Helen Besharatian on 6/7/1402 AP.
-//
-
 import UIKit
 
 enum ContactViewMode {
@@ -18,7 +5,7 @@ enum ContactViewMode {
     case add
 }
 
-class AddContactVC: UIViewController {
+class AddContactController: UIViewController {
 
     
     @IBOutlet weak var contactImageIV: UIImageView!
@@ -60,7 +47,6 @@ class AddContactVC: UIViewController {
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
             present(imagePicker, animated: true, completion: nil)
-        
     }
     
     @IBAction func addingContactName(_ sender: Any) {
@@ -169,7 +155,7 @@ class AddContactVC: UIViewController {
     }
 }
     
-extension AddContactVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension AddContactController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -190,15 +176,3 @@ protocol ContactScreenDelegate: AnyObject {
     
     var contactViewMode: ContactViewMode { get set }
 }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-

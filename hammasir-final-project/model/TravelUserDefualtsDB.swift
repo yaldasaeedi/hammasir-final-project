@@ -1,9 +1,3 @@
-//
-//  TravelUserDefualtsDB.swift
-//  hammasir-final-project
-//
-//  Created by yalda saeedi on 6/26/1402 AP.
-//
 
 import Foundation
 
@@ -11,26 +5,28 @@ protocol TravelStorage {
     
     func saveTravel(_ travel: TravalInformation)
     func fetchTravels() -> [TravalInformation]
+    func deleteTravel(at indexPath: IndexPath)
     }
 
 class TravelUserDefualtsDB : TravelStorage{
-    
     
     private let userDefaults = UserDefaults.standard
     private var storageKey: String
     
     init(storageKey: String) {
+        
         self.storageKey = storageKey
     }
+    
     func saveTravel(_ travel: TravalInformation) {
-        
-        let savedTravel = fetchTravels()
-        
-        
         do {
             
             let encoder = JSONEncoder()
-            let encodedData = try encoder.encode(savedTravel)
+            
+            var savedTravels = fetchTravels()
+            savedTravels.append(travel)
+    
+            let encodedData = try encoder.encode(savedTravels)
             userDefaults.set(encodedData, forKey: storageKey)
         } catch {
             
@@ -47,13 +43,29 @@ class TravelUserDefualtsDB : TravelStorage{
         do {
             
             let decoder = JSONDecoder()
-            let savedTravel = try decoder.decode([TravalInformation].self, from: encodedData)
-            return savedTravel
+            let savedTravels = try decoder.decode([TravalInformation].self, from: encodedData)
+            
+            return savedTravels
         } catch {
             
             print("Error occurred while decoding data: \(error)")
+            
             return []
         }
     }
-    
+    func deleteTravel(at indexPath: IndexPath) {
+        
+        var savedContacts = fetchTravels()
+        savedContacts.remove(at: indexPath.row)
+        
+        do {
+            
+            let encoder = JSONEncoder()
+            let encodedData = try encoder.encode(savedContacts)
+            userDefaults.set(encodedData, forKey: storageKey)
+        } catch {
+            
+            print("Error occurred while encoding data: \(error)")
+        }
+    }
 }

@@ -1,23 +1,17 @@
 //
-//  TableViewForSelect.swift
+//  userOriginController.swift
 //  hammasir-final-project
 //
-//  Created by yalda saeedi on 6/27/1402 AP.
+//  Created by yalda saeedi on 6/28/1402 AP.
 //
 
 import UIKit
 
-class TableViewForSelect: UITableViewController {
-    
-    @IBOutlet var contactTableCell: UITableView!
-    
-    var selectedIndexPath: IndexPath?
-    var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
-    static var fellowTravelerName : [String]?
-    
+class userOriginController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactTableCell.register(CustomTableViewCell.self, forCellReuseIdentifier: "contactSelectionCell")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,62 +22,24 @@ class TableViewForSelect: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return contactsModel.getContactsArray().count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
-        
+
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactSelectionCell", for: indexPath) as! CustomTableViewCell
-        let contact = contactsModel.getContactsArray()[indexPath.row]
-        cell.textLabel?.text = contact.getContactName()
-        if let imageView = cell.imageView {
-            let originalImage = UIImage(data : contact.getContactImage())
-            let newSize = CGSize(width: 16.0, height: 16.0)
-            let resizedImage = originalImage?.resizedImage(withSize: newSize)
-            imageView.image = resizedImage
-            
-        }
-        if contact.getIsChecked() == true {
-            cell.accessoryType = .checkmark
-        }else{
-            cell.accessoryType = .none
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        selectedIndexPath = indexPath
-        
-        let contact = contactsModel.getContactsArray()[indexPath.row]
-        if contact.getIsChecked() == true {
-            cell?.accessoryType = .none
-            contactsModel.updateContactIsChecked(isChecked: false, at: indexPath)
-            
-        } else {
-            cell?.accessoryType = .checkmark
-            contactsModel.updateContactIsChecked(isChecked: true, at: indexPath)
-            
-        }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    @IBAction func DoneClicked(_ sender: Any) {
-        for checkedContact in contactsModel.getContactsArray(){
-            if checkedContact.getIsChecked() == true {
-                
-                TableViewForSelect.fellowTravelerName?.append(checkedContact.getContactName())
-                dismiss(animated: true, completion: nil)
-                
-            }
-        }
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-struct ContactInformation : Decodable, Encodable{
+struct ContactInformation : Codable{
     
     private var name : String
     private var number : Int64
@@ -30,36 +30,38 @@ struct ContactInformation : Decodable, Encodable{
     
     func getContactPhone() -> Int64{
         
-        return number
+        return self.number
         
     }
     
     func getContactName() -> String{
         
-        return name
+        return self.name
     }
     
     func getContactImage() -> Data{
         
-        return image
+        return self.image
     }
     
     func getContactEmail() -> String{
         
-        return email
+        return self.email
         
     }
     
     func getContactBirthday() -> Date{
         
-        return birthday
+        return self.birthday
     }
     
     func getContactNote() -> String{
         
-        return note
+        return self.note
     }
+    
     func getIsChecked() -> Bool{
-        return isChecked
+        
+        return self.isChecked
     }
 }
