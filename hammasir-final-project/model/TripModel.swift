@@ -50,6 +50,15 @@ class tripModel {
         return self.tripStorage
     }
     
+    func getTripDestinationFormattedAddress() -> String{
+        
+        return self.getTripDestinationFormattedAddress()
+    }
+    
+    func getTripOriginFormattedAddress() -> String{
+        
+        return self.getTripOriginFormattedAddress()
+    }
     func addNewTrip(newOriginLat: Double, newOriginLng: Double, newDestinationLat: Double, newDestinationLng: Double, newFellowTraveler: [ContactInformation], newTripName: String, newOriginFormattedAddress: String, newDestinationFormattedAddress: String){
         
         let newTrip : TravalInformation = TravalInformation(originLat: newOriginLat,
@@ -61,6 +70,11 @@ class tripModel {
                                                             originFormattedAddress: newOriginFormattedAddress,
                                                             destinationFormattedAddress: newDestinationFormattedAddress)
         self.tripStorage.saveTravel(newTrip)
+    }
+    
+    func deletTrip(indexPath: IndexPath){
+        
+        self.tripStorage.deleteTravel(at: indexPath)
     }
     
 }

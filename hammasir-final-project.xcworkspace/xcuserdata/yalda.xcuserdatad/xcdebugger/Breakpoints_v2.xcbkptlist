@@ -3,4 +3,54 @@
    uuid = "7CD18ED8-A78C-485E-882C-B0F5F2EFA23E"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF35E9AA-4765-4495-8008-BC859D1A6596"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hammasir-final-project/model/APIrequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getTheAddress(latitude:longitude:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF35E9AA-4765-4495-8008-BC859D1A6596 - 4cb37c80ad006924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in hammasir_final_project.APIrequest.getTheAddress(latitude: Swift.Double, longitude: Swift.Double, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "hammasir-final-project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yalda/Desktop/hammasir-final-project/hammasir-final-project/model/APIrequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1505">
+               </Location>
+               <Location
+                  uuid = "CF35E9AA-4765-4495-8008-BC859D1A6596 - 4cb37c80ad006962"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in hammasir_final_project.APIrequest.getTheAddress(latitude: Swift.Double, longitude: Swift.Double, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "hammasir-final-project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yalda/Desktop/hammasir-final-project/hammasir-final-project/model/APIrequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1505">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

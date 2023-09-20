@@ -3,7 +3,7 @@ import UIKit
 class TravelHistoryTableController: UIViewController{
     
     @IBOutlet weak var travelHistory: UITableView!
-    var tripsModel = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
+    private var tripsModel = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,6 +12,7 @@ class TravelHistoryTableController: UIViewController{
         travelHistory.register(CustomTableViewCell.self, forCellReuseIdentifier: "travelHistoryCell")
 
     }
+
 }
 
 extension TravelHistoryTableController :  UITableViewDataSource, UITableViewDelegate{
@@ -28,9 +29,20 @@ extension TravelHistoryTableController :  UITableViewDataSource, UITableViewDele
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "travelHistoryCell", for: indexPath) as! CustomTableViewCell
         let tripName = tripsModel.getTripsName()[indexPath.row]
+        let tripDestination = tripsModel.getTripDestinationFormattedAddress()
         cell.textLabel?.text = tripName
+        //cell.detailTextLabel?.text = tripDestination
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            tripsModel.deletTrip(indexPath: indexPath)
+            travelHistory.deleteRows(at: [indexPath], with: .fade)
+            travelHistory.reloadData()
+        }
     }
     
 }

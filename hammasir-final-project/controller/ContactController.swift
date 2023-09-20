@@ -6,9 +6,9 @@ class ContactController : UIViewController {
     
     @IBOutlet weak var contactTableTV: UITableView!
     
-    var selectedIndexPath: IndexPath?
-    var trip = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
-    var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
+    private var selectedIndexPath: IndexPath?
+    private var trip = tripModel(tripStorage: TravelUserDefualtsDB(storageKey: "trips"))
+    private var contactsModel = ContactsManager(contactStorage: ContactUserDefaultsDB(storageKey: "contacts"))
     
     static var fellowTravelerName : [String]?
     
@@ -89,24 +89,17 @@ extension ContactController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
         return true
     }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//
-//        if editingStyle == .delete {
-//
-//            contactsModel.deleteContact(indexPath: indexPath)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
                 
             contactsModel.deleteContact(indexPath: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            contactTableTV.deleteRows(at: [indexPath], with: .fade)
             contactTableTV.reloadData()
         }
     }

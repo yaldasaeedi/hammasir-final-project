@@ -50,41 +50,7 @@ class StartingTripFlowController{
         viewController.present(alertController, animated: true, completion: nil)
     }
     
-    // entekhab mabda ba maghsad
-    
-//    func getDataFromMapController(newOriginLng: Double,
-//                                             newOriginLat: Double,
-//                                             newDestinationLng: Double,
-//                                             newDestinationLat: Double,
-//                                             newFormattedAddress: String,
-//                                             newViewController: UIViewController) {
-//            TripData.shared.originLng = newOriginLng
-//            TripData.shared.originLat = newOriginLat
-//            TripData.shared.destinationLng = newDestinationLng
-//            TripData.shared.destinationLat = newDestinationLat
-//            TripData.shared.formattedAddress = newFormattedAddress
-//        tripIsAdding()
-//        }
-//    func showYesNoNotificationForTrip(on viewController: UIViewController) {
-//
-//        let alertController = UIAlertController(title: "Notification",
-//                                                message: "Are you sure you want to add this Trip?",
-//                                                preferredStyle: .alert)
-//
-//        let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
-//
-//            self.showYesNoNotificationForContact(on : viewController )
-//        }
-//
-//        let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
-//        }
-//
-//        alertController.addAction(yesAction)
-//        alertController.addAction(noAction)
-//
-//        viewController.present(alertController, animated: true, completion: nil)
-//    }
-    
+
     func showYesNoNotificationForContact(on viewController: UIViewController) {
         
         let alertController = UIAlertController(title: "Notification",
@@ -129,11 +95,24 @@ class StartingTripFlowController{
                 return
             }
             
-            let storyboard = UIStoryboard(name: "TravelList", bundle: bundle)
-            let myViewController = storyboard.instantiateViewController(withIdentifier: "TripHistory") as! TravelHistoryTableController
-            
-            viewController.present(myViewController, animated: true, completion: nil)
-            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+            // Create an instance of the root view controller from the main storyboard
+            guard let rootViewController = mainStoryboard.instantiateInitialViewController() else {
+                fatalError("Unable to instantiate root view controller from main storyboard")
+            }
+
+            // Set the presentation style and transition style
+            rootViewController.modalPresentationStyle = .fullScreen
+            rootViewController.modalTransitionStyle = .coverVertical
+
+            // Dismiss or pop all the presented view controllers until you reach the root view controller
+            if let presentingViewController = viewController.presentingViewController {
+                presentingViewController.dismiss(animated: true) {
+                    // Present the root view controller
+                    presentingViewController.present(rootViewController, animated: true, completion: nil)
+                }
+            }
             self.tripIsAdding()
             
         }
@@ -149,8 +128,7 @@ class StartingTripFlowController{
     }
     
     func tripIsAdding() {
-        print(TripData.shared.originFormattedAddress)
-        print(TripData.shared.destinationFormattedAddress)
+        
         self.tripsModel.addNewTrip(newOriginLat: TripData.shared.originLat,
                                    newOriginLng: TripData.shared.originLng,
                                    newDestinationLat: TripData.shared.destinationLat,
@@ -161,6 +139,7 @@ class StartingTripFlowController{
                                    newDestinationFormattedAddress: TripData.shared.destinationFormattedAddress
                             
             )
+        print(TripData.shared.destinationFormattedAddress)
         
 
     }

@@ -26,7 +26,6 @@
 		E0B962E22AB104F400C15974 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962E42AB104F400C15974 /* Map.storyboard */; };
 		E0B962EB2AB1086B00C15974 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EA2AB1086B00C15974 /* ContactList.storyboard */; };
 		E0B962ED2AB1088200C15974 /* TravelList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EC2AB1088200C15974 /* TravelList.storyboard */; };
-		E0B962EF2AB1089800C15974 /* TravelHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962EE2AB1089800C15974 /* TravelHistoryController.swift */; };
 		E0B962F12AB108AD00C15974 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F02AB108AD00C15974 /* ContactController.swift */; };
 		E0B962F32AB10AC100C15974 /* AddContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F22AB10AC100C15974 /* AddContactController.swift */; };
 		E0B962F52AB10B2900C15974 /* TravelHistoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */; };
@@ -83,7 +82,6 @@
 		E0B962E52AB1055200C15974 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		E0B962EA2AB1086B00C15974 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		E0B962EC2AB1088200C15974 /* TravelList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelList.storyboard; sourceTree = "<group>"; };
-		E0B962EE2AB1089800C15974 /* TravelHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHistoryController.swift; sourceTree = "<group>"; };
 		E0B962F02AB108AD00C15974 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		E0B962F22AB10AC100C15974 /* AddContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactController.swift; sourceTree = "<group>"; };
 		E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				E0B962F02AB108AD00C15974 /* ContactController.swift */,
 				E0B962F22AB10AC100C15974 /* AddContactController.swift */,
 				E03D38702AB18F140029C049 /* CustomContactTVC.swift */,
-				E0B962EE2AB1089800C15974 /* TravelHistoryController.swift */,
 				E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */,
 				B52965D32AB847FF00318081 /* StartingTripFlowController.swift */,
 				B52965DA2AB8599900318081 /* TableViewForSelectController.swift */,
@@ -393,7 +390,6 @@
 				E0B963522AB1118600C15974 /* TripModel.swift in Sources */,
 				B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
-				E0B962EF2AB1089800C15974 /* TravelHistoryController.swift in Sources */,
 				E0B962F12AB108AD00C15974 /* ContactController.swift in Sources */,
 				E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */,
 				B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */,

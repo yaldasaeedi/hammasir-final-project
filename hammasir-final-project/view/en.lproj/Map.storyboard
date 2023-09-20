@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
-                                <rect key="frame" x="0.0" y="103" width="430" height="742.33333333333337"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="786.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-8r-i67">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="692.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="736.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ARR-7w-n7c">
-                                        <rect key="frame" x="0.0" y="700.66666666666663" width="430" height="41.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="744.66666666666663" width="430" height="41.666666666666629"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-0S-IlQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="430" height="41.666666666666664"/>
@@ -113,24 +113,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5577.2093023255811" y="61.802575107296143"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4qF-u5-SwJ">
-            <objects>
-                <navigationController storyboardIdentifier="Map" automaticallyAdjustsScrollViewInsets="NO" id="CUO-aE-wy2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6U-VL-wtc">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="s0l-2h-YRn" kind="relationship" relationship="rootViewController" id="yeE-nj-BoV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kFy-Ld-6C9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4652.6717557251905" y="62.676056338028175"/>
         </scene>
     </scenes>
     <resources>

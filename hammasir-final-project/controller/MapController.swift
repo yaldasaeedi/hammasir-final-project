@@ -4,26 +4,28 @@ import CoreLocation
 
 class MapController: UIViewController, CLLocationManagerDelegate {
     
-    var xDestination : Double = 0.0
-    var yDestination : Double = 0.0
-    var xOrigin : Double = 0.0
-    var yOrigin : Double = 0.0
-    var formattedAddress : String?
+    private var xDestination : Double = 0.0
+    private var yDestination : Double = 0.0
+    private var xOrigin : Double = 0.0
+    private var yOrigin : Double = 0.0
+    private var formattedAddress : String?
     
-    var APIRequestForFormatedAddress : APIrequest = APIrequest()
-    var mapView: NTMapView?
-    var startingTrip : StartingTripFlowController = StartingTripFlowController()
-    var markerLayer: NTVectorElementLayer?
-    var userMarkerLayer = NTVectorElementLayer()
-    var marker = NTMarker()
-    var animSt = NTAnimationStyle()
-    var userLocation: CLLocation!
-    var locationManager: CLLocationManager!
-    var zoomNumber : Float = 13
+    private var APIRequestForFormatedAddress : APIrequest = APIrequest()
+    private var startingTrip : StartingTripFlowController = StartingTripFlowController()
+    private var markerLayer: NTVectorElementLayer?
+    private var userMarkerLayer = NTVectorElementLayer()
+    private var marker = NTMarker()
+    private var animSt = NTAnimationStyle()
+    private var mapView: NTMapView?
+    private let lastUpdateTime = NSString()
+    //let mRequestingLocationUpdates = Bool()
+    
+    private var userLocation: CLLocation!
+    private var locationManager: CLLocationManager!
+    private var zoomNumber : Float = 13
     
     
-    let lastUpdateTime = NSString()
-    let mRequestingLocationUpdates = Bool()
+    
     
     @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet weak var currentLocationBTN: UIButton!
@@ -31,17 +33,20 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var maximizeBTN: UIButton!
     
     override func viewDidLoad() {
+        
         loadMap()
         initLocation()
         clickForSetingDestination()
         super.viewDidLoad()
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
         startLocationUpdates()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
         stopLocationUpdates()
     }
@@ -78,28 +83,29 @@ class MapController: UIViewController, CLLocationManagerDelegate {
         
     }
     func initLocation() {
-        // Create a location manager
+        
         locationManager = CLLocationManager()
-        // Set a delegate to receive location callbacks
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         userLocation = locations.last
         onLocationChanged()
     }
     func startLocationUpdates() {
-        // Start the location manager
+        
         locationManager.startUpdatingLocation()
     }
     
     func stopLocationUpdates() {
-        // stop the location manager
+        
         locationManager.stopUpdatingLocation()
     }
     
     func onLocationChanged() {
+        
         if userLocation != nil {
             addUserMarker(NTLngLat(x: userLocation.coordinate.longitude, y: userLocation.coordinate.latitude))
             xOrigin = userLocation.coordinate.longitude
@@ -162,34 +168,29 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     }
     
     func addUserMarker(_ loc: NTLngLat) {
-        // Creating marker style. We should use an object of type MarkerStyleCreator, set all features on it
-        // and then call buildStyle method on it. This method returns an object of type MarkerStyle
+        
         let markStCr = NTMarkerStyleCreator()
         markStCr?.setSize(30)
         markStCr?.setBitmap(NTBitmapUtils.createBitmap(from: UIImage(named: "ic_marker")))
         let markSt: NTMarkerStyle = markStCr!.buildStyle()
         
-        // Creating user marker
         let marker = NTMarker(pos: loc, style: markSt)
         
-        // Clearing userMarkerLayer
         userMarkerLayer.clear()
         
-        // Adding user marker to userMarkerLayer, or showing marker on map!
         userMarkerLayer.add(marker)
     }
     
     func accessSharedData() {
-        print(" its in access data")
 
         TripData.shared.originLng = xOrigin
         TripData.shared.originLat = yOrigin
         TripData.shared.destinationLng = xDestination
         TripData.shared.destinationLat = yDestination
-        let apiRequest = APIrequest()
 
-        apiRequest.getTheAddress(latitude: xOrigin, longitude: yOrigin) { address in
+        APIRequestForFormatedAddress.getTheAddress(latitude: xOrigin, longitude: yOrigin) { address in
             if let address = address {
+                
                 print("Formatted Address (Origin): \(address)")
                 TripData.shared.originFormattedAddress = address
             } else {
@@ -197,16 +198,15 @@ class MapController: UIViewController, CLLocationManagerDelegate {
             }
         }
 
-        apiRequest.getTheAddress(latitude: xDestination, longitude: yDestination) { address in
+        APIRequestForFormatedAddress.getTheAddress(latitude: xDestination, longitude: yDestination) { address in
             if let address = address {
+                
                 print("Formatted Address (Destination): \(address)")
-                // Perform any desired actions with the destination address here
                 TripData.shared.destinationFormattedAddress = address
             } else {
                 print("Failed to retrieve the destination address.")
             }
         }
-        print(" its in access data")
 //        print(tempFormattedAdrressForOrigin)
 //        print(tempFormattedAdrressForDestination)
 
@@ -215,14 +215,17 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     @IBAction func focusOnUserLocation(_ sender: Any) {
         
         if userLocation != nil {
+            
             mapView!.setFocalPointPosition(NTLngLat(x: userLocation.coordinate.longitude, y: userLocation.coordinate.latitude), durationSeconds: 0.5)
             mapView!.setZoom(15, durationSeconds: 0.5)
         } else {
+            
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
         }
     }
     
     @IBAction func DoneOnClicked(_ sender: Any) {
+        
         self.accessSharedData()
         startingTrip.showNameInputNotification(on: self)
     }
