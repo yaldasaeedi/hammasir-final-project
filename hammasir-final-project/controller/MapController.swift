@@ -4,10 +4,10 @@ import CoreLocation
 
 class MapController: UIViewController, CLLocationManagerDelegate {
     
-    var xDestination : Double?
-    var yDestination : Double?
-    var xOrigin : Double?
-    var yOrigin : Double?
+    var xDestination : Double = 0.0
+    var yDestination : Double = 0.0
+    var xOrigin : Double = 0.0
+    var yOrigin : Double = 0.0
     var formattedAddress : String?
     
     var APIRequestForFormatedAddress : APIrequest = APIrequest()
@@ -114,8 +114,8 @@ class MapController: UIViewController, CLLocationManagerDelegate {
             if clickInfo.getClickType() == NTClickType.CLICK_TYPE_LONG {
                 let clickedLocation = clickInfo.getClickPos()
                 self.addMarker(loc: clickedLocation!)
-                self.xDestination = clickedLocation?.getX()
-                self.yDestination = clickedLocation?.getY()
+                self.xDestination = (clickedLocation?.getX())!
+                self.yDestination = (clickedLocation?.getY())!
             }
         }
         mapView?.setMapEventListener(mapEventListener)
@@ -182,15 +182,29 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     func accessSharedData() {
         print(" its in access data")
 
-        TripData.shared.originLng = xOrigin!
-        TripData.shared.originLat = yOrigin!
-        TripData.shared.destinationLng = xDestination!
-        TripData.shared.destinationLat = yDestination!
-        let tempFormattedAdrressForOrigin = APIRequestForFormatedAddress.getTheAddress(latitude: xOrigin!, langitude: yOrigin!)
-        let tempFormattedAdrressForDestination = APIRequestForFormatedAddress.getTheAddress(latitude: xDestination!, langitude: yDestination!)
+        TripData.shared.originLng = xOrigin
+        TripData.shared.originLat = yOrigin
+        TripData.shared.destinationLng = xDestination
+        TripData.shared.destinationLat = yDestination
+        APIrequest().getTheAddress(latitude: xOrigin, longitude: yOrigin) { address in
+            if let address = address {
+                print("Formatted Address: \(address)")
+                // Perform any desired actions with the address here
+            } else {
+                print("Failed to retrieve the address.")
+            }
+        }
+        APIRequestForFormatedAddress.getTheAddress(latitude: xDestination, longitude: yDestination){ address in
+            if let address = address {
+                print("Formatted Address: \(address)")
+                // Perform any desired actions with the address here
+            } else {
+                print("Failed to retrieve the address.")
+            }
+        }
         print(" its in access data")
-        print(tempFormattedAdrressForOrigin)
-        print(tempFormattedAdrressForDestination)
+//        print(tempFormattedAdrressForOrigin)
+//        print(tempFormattedAdrressForDestination)
 
         //TripData.shared.formattedAddress = formattedAddress!
     }
