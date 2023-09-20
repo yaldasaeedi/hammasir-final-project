@@ -1,13 +1,13 @@
 //
-//  TravelTableVC.swift
+//  userOriginController.swift
 //  hammasir-final-project
 //
-//  Created by Helen Besharatian on 6/22/1402 AP.
+//  Created by yalda saeedi on 6/28/1402 AP.
 //
 
 import UIKit
 
-class TravelTableVC: UITableViewController {
+class userOriginController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

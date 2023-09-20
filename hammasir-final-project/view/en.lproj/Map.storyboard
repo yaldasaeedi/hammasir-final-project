@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Controller-->
+        <scene sceneID="e6h-Sa-vXk">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s0l-2h-YRn" customClass="MapController" customModule="hammasir_final_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BV-l5-aEr">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Yl-9rG" userLabel="mainStack">
+                                <rect key="frame" x="0.0" y="59" width="430" height="786.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-8r-i67">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="736.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ARR-7w-n7c">
+                                        <rect key="frame" x="0.0" y="744.66666666666663" width="430" height="41.666666666666629"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-0S-IlQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="41.666666666666664"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDA-0o-FKs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=" ">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="maximizeClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="QJ8-DG-QB4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-pF-J6o">
+                                                        <rect key="frame" x="143.33333333333331" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" title=" ">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="minimizeClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="qzg-Ca-U2V"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVU-bQ-tPD">
+                                                        <rect key="frame" x="286.66666666666669" y="0.0" width="143.33333333333331" height="41.666666666666664"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title=" " imagePadding="0.0">
+                                                            <imageReference key="image" image="paperplane" catalog="system" variableValue="0.0"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" weight="bold"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="focusOnUserLocation:" destination="s0l-2h-YRn" eventType="touchUpInside" id="QBM-FQ-QAn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="xtx-pF-J6o" firstAttribute="width" secondItem="qDA-0o-FKs" secondAttribute="width" id="2Pc-ay-E3t"/>
+                                                    <constraint firstItem="NVU-bQ-tPD" firstAttribute="width" secondItem="xtx-pF-J6o" secondAttribute="width" id="86k-6k-XuE"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JsE-py-LqD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="centerX" secondItem="5BV-l5-aEr" secondAttribute="centerX" id="GjX-Ib-CAw"/>
+                            <constraint firstItem="JsE-py-LqD" firstAttribute="bottom" secondItem="TOi-Yl-9rG" secondAttribute="bottom" constant="52.666666666666629" id="VXZ-IY-06i"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="top" secondItem="JsE-py-LqD" secondAttribute="top" id="XYD-dn-mZm"/>
+                            <constraint firstItem="TOi-Yl-9rG" firstAttribute="width" secondItem="JsE-py-LqD" secondAttribute="width" id="kEm-eG-YCA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Anh-4z-RBh">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ble-xV-rVO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jwx-38-x8V">
+                                <rect key="frame" x="302.33333333333331" y="1.3333333333333321" width="107.66666666666669" height="41.666666666666671"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DoneOnClicked:" destination="s0l-2h-YRn" eventType="touchUpInside" id="0bO-Tz-NBU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentLocationBTN" destination="NVU-bQ-tPD" id="spa-hZ-xEl"/>
+                        <outlet property="mapContainerView" destination="KHF-8r-i67" id="dLr-0j-EPf"/>
+                        <outlet property="maximizeBTN" destination="qDA-0o-FKs" id="zL8-fo-Jzx"/>
+                        <outlet property="minimizeBTN" destination="xtx-pF-J6o" id="p15-T7-IhD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad7-B5-gZf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5577.2093023255811" y="61.802575107296143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.89294056056701032" green="0.76959455501863672" blue="0.79546665648498305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

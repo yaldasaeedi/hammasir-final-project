@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68258D0056C48C74A9670609 /* Pods_hammasir_final_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */; };
+		B52841712ABA4092009C8270 /* APIrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52841702ABA4092009C8270 /* APIrequest.swift */; };
+		B52965D42AB847FF00318081 /* StartingTripFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965D32AB847FF00318081 /* StartingTripFlowController.swift */; };
+		B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965DA2AB8599900318081 /* TableViewForSelectController.swift */; };
+		B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B58251832AB977E20071AEC3 /* NeshanHelper.m */; };
+		B5F265602AB785DE00949BB7 /* TravelUserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */; };
+		E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386C2AB18E970029C049 /* ContactInformation.swift */; };
+		E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D386E2AB18EC20029C049 /* ContactUserDefualtsDB.swift */; };
+		E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D38702AB18F140029C049 /* CustomContactTVC.swift */; };
 		E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AB2AB1017800C15974 /* AppDelegate.swift */; };
 		E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AD2AB1017800C15974 /* SceneDelegate.swift */; };
 		E0B962B02AB1017800C15974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962AF2AB1017800C15974 /* ViewController.swift */; };
@@ -17,19 +24,16 @@
 		E0B962DC2AB102D500C15974 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = E0B962DB2AB102D500C15974 /* neshan.license */; };
 		E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */; };
 		E0B962E22AB104F400C15974 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962E42AB104F400C15974 /* Map.storyboard */; };
-		E0B962E72AB1055200C15974 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962E52AB1055200C15974 /* MapVC.swift */; };
 		E0B962EB2AB1086B00C15974 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EA2AB1086B00C15974 /* ContactList.storyboard */; };
 		E0B962ED2AB1088200C15974 /* TravelList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B962EC2AB1088200C15974 /* TravelList.storyboard */; };
-		E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962EE2AB1089800C15974 /* TravelVC.swift */; };
-		E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F02AB108AD00C15974 /* ContactVC.swift */; };
-		E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F22AB10AC100C15974 /* AddContactVC.swift */; };
-		E0B962F52AB10B2900C15974 /* TravelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F42AB10B2900C15974 /* TravelTableVC.swift */; };
-		E0B963482AB1113000C15974 /* MainM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963472AB1113000C15974 /* MainM.swift */; };
-		E0B9634A2AB1113D00C15974 /* MapM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963492AB1113D00C15974 /* MapM.swift */; };
-		E0B9634C2AB1115100C15974 /* ContactM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634B2AB1115100C15974 /* ContactM.swift */; };
-		E0B9634E2AB1115F00C15974 /* AddContactM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634D2AB1115F00C15974 /* AddContactM.swift */; };
-		E0B963502AB1117400C15974 /* TravelM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634F2AB1117400C15974 /* TravelM.swift */; };
-		E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963512AB1118600C15974 /* TravelTableM.swift */; };
+		E0B962F12AB108AD00C15974 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F02AB108AD00C15974 /* ContactController.swift */; };
+		E0B962F32AB10AC100C15974 /* AddContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F22AB10AC100C15974 /* AddContactController.swift */; };
+		E0B962F52AB10B2900C15974 /* TravelHistoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */; };
+		E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634B2AB1115100C15974 /* ContactModel.swift */; };
+		E0B963502AB1117400C15974 /* TravelInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9634F2AB1117400C15974 /* TravelInformation.swift */; };
+		E0B963522AB1118600C15974 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B963512AB1118600C15974 /* TripModel.swift */; };
+		E0E256B42AB34C0800042014 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B962E52AB1055200C15974 /* MapController.swift */; };
+		E26BD46A6EBDF5EB104C6B92 /* Pods_hammasir_final_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
-		DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
+		1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
+		6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
+		8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52841702ABA4092009C8270 /* APIrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIrequest.swift; sourceTree = "<group>"; };
+		B52965D32AB847FF00318081 /* StartingTripFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTripFlowController.swift; sourceTree = "<group>"; };
+		B52965DA2AB8599900318081 /* TableViewForSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForSelectController.swift; sourceTree = "<group>"; };
+		B58251832AB977E20071AEC3 /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
+		B58251852AB9780E0071AEC3 /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
+		B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelUserDefualtsDB.swift; sourceTree = "<group>"; };
+		E03D386C2AB18E970029C049 /* ContactInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformation.swift; sourceTree = "<group>"; };
+		E03D386E2AB18EC20029C049 /* ContactUserDefualtsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserDefualtsDB.swift; sourceTree = "<group>"; };
+		E03D38702AB18F140029C049 /* CustomContactTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactTVC.swift; sourceTree = "<group>"; };
+		E06DF4C02AB33E1A0073539E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
 		E0B962A82AB1017800C15974 /* hammasir-final-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hammasir-final-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B962AB2AB1017800C15974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B962AD2AB1017800C15974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E0B962AF2AB1017800C15974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0B962B22AB1017800C15974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0B962B42AB1017900C15974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B962B72AB1017900C15974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B962B92AB1017900C15974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,20 +79,16 @@
 		E0B962DB2AB102D500C15974 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		E0B962DD2AB1034B00C15974 /* hammasir-final-project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hammasir-final-project-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "hammasir-final-project-bridgin-header.m"; sourceTree = "<group>"; };
-		E0B962E52AB1055200C15974 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		E0B962E92AB1082B00C15974 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
+		E0B962E52AB1055200C15974 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		E0B962EA2AB1086B00C15974 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		E0B962EC2AB1088200C15974 /* TravelList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelList.storyboard; sourceTree = "<group>"; };
-		E0B962EE2AB1089800C15974 /* TravelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVC.swift; sourceTree = "<group>"; };
-		E0B962F02AB108AD00C15974 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
-		E0B962F22AB10AC100C15974 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
-		E0B962F42AB10B2900C15974 /* TravelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableVC.swift; sourceTree = "<group>"; };
-		E0B963472AB1113000C15974 /* MainM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainM.swift; sourceTree = "<group>"; };
-		E0B963492AB1113D00C15974 /* MapM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapM.swift; sourceTree = "<group>"; };
-		E0B9634B2AB1115100C15974 /* ContactM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactM.swift; sourceTree = "<group>"; };
-		E0B9634D2AB1115F00C15974 /* AddContactM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactM.swift; sourceTree = "<group>"; };
-		E0B9634F2AB1117400C15974 /* TravelM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelM.swift; sourceTree = "<group>"; };
-		E0B963512AB1118600C15974 /* TravelTableM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableM.swift; sourceTree = "<group>"; };
+		E0B962F02AB108AD00C15974 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		E0B962F22AB10AC100C15974 /* AddContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactController.swift; sourceTree = "<group>"; };
+		E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableController.swift; sourceTree = "<group>"; };
+		E0B9634B2AB1115100C15974 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		E0B9634F2AB1117400C15974 /* TravelInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInformation.swift; sourceTree = "<group>"; };
+		E0B963512AB1118600C15974 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		E0E256B32AB346E800042014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68258D0056C48C74A9670609 /* Pods_hammasir_final_project.framework in Frameworks */,
+				E26BD46A6EBDF5EB104C6B92 /* Pods_hammasir_final_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,13 +117,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43CDFE402FBD3FBDBFCAAD33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E45BB2C4B5A93C4AA1C8BC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */,
-				DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */,
+				6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */,
+				1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5F265612AB78A0600949BB7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E0B962B12AB1017800C15974 /* Main.storyboard */,
+				E0B962E42AB104F400C15974 /* Map.storyboard */,
+				E0B962EA2AB1086B00C15974 /* ContactList.storyboard */,
+				E0B962EC2AB1088200C15974 /* TravelList.storyboard */,
+				E0B962B62AB1017900C15974 /* LaunchScreen.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B5F265622AB78A1E00949BB7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0B962AF2AB1017800C15974 /* ViewController.swift */,
+				E0B962E52AB1055200C15974 /* MapController.swift */,
+				E0B962F02AB108AD00C15974 /* ContactController.swift */,
+				E0B962F22AB10AC100C15974 /* AddContactController.swift */,
+				E03D38702AB18F140029C049 /* CustomContactTVC.swift */,
+				E0B962F42AB10B2900C15974 /* TravelHistoryTableController.swift */,
+				B52965D32AB847FF00318081 /* StartingTripFlowController.swift */,
+				B52965DA2AB8599900318081 /* TableViewForSelectController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		B5F265632AB78A3900949BB7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E03D386E2AB18EC20029C049 /* ContactUserDefualtsDB.swift */,
+				B5F2655F2AB785DE00949BB7 /* TravelUserDefualtsDB.swift */,
+				E0B9634F2AB1117400C15974 /* TravelInformation.swift */,
+				E0B963512AB1118600C15974 /* TripModel.swift */,
+				E0B9634B2AB1115100C15974 /* ContactModel.swift */,
+				E03D386C2AB18E970029C049 /* ContactInformation.swift */,
+				B52841702ABA4092009C8270 /* APIrequest.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		E0B9629F2AB1017800C15974 = {
@@ -124,7 +182,7 @@
 				E0B962AA2AB1017800C15974 /* hammasir-final-project */,
 				E0B962A92AB1017800C15974 /* Products */,
 				7E45BB2C4B5A93C4AA1C8BC5 /* Pods */,
-				F632655125D61722B9942864 /* Frameworks */,
+				43CDFE402FBD3FBDBFCAAD33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,39 +199,19 @@
 		E0B962AA2AB1017800C15974 /* hammasir-final-project */ = {
 			isa = PBXGroup;
 			children = (
-				E0B962B12AB1017800C15974 /* Main.storyboard */,
-				E0B962E42AB104F400C15974 /* Map.storyboard */,
-				E0B962EA2AB1086B00C15974 /* ContactList.storyboard */,
-				E0B962EC2AB1088200C15974 /* TravelList.storyboard */,
-				E0B962AF2AB1017800C15974 /* ViewController.swift */,
-				E0B962E52AB1055200C15974 /* MapVC.swift */,
-				E0B962F02AB108AD00C15974 /* ContactVC.swift */,
-				E0B962EE2AB1089800C15974 /* TravelVC.swift */,
-				E0B962F42AB10B2900C15974 /* TravelTableVC.swift */,
-				E0B962F22AB10AC100C15974 /* AddContactVC.swift */,
-				E0B963472AB1113000C15974 /* MainM.swift */,
-				E0B963492AB1113D00C15974 /* MapM.swift */,
-				E0B9634B2AB1115100C15974 /* ContactM.swift */,
-				E0B9634D2AB1115F00C15974 /* AddContactM.swift */,
-				E0B9634F2AB1117400C15974 /* TravelM.swift */,
-				E0B963512AB1118600C15974 /* TravelTableM.swift */,
+				B5F265632AB78A3900949BB7 /* model */,
+				B5F265622AB78A1E00949BB7 /* controller */,
+				B5F265612AB78A0600949BB7 /* view */,
 				E0B962AB2AB1017800C15974 /* AppDelegate.swift */,
 				E0B962AD2AB1017800C15974 /* SceneDelegate.swift */,
 				E0B962B42AB1017900C15974 /* Assets.xcassets */,
-				E0B962B62AB1017900C15974 /* LaunchScreen.storyboard */,
 				E0B962B92AB1017900C15974 /* Info.plist */,
 				E0B962DE2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m */,
 				E0B962DD2AB1034B00C15974 /* hammasir-final-project-Bridging-Header.h */,
+				B58251832AB977E20071AEC3 /* NeshanHelper.m */,
+				B58251852AB9780E0071AEC3 /* NeshanHelper.h */,
 			);
 			path = "hammasir-final-project";
-			sourceTree = "<group>";
-		};
-		F632655125D61722B9942864 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5266D32B374AA03433BFDD83 /* Pods_hammasir_final_project.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0B962D22AB1017900C15974 /* Build configuration list for PBXNativeTarget "hammasir-final-project" */;
 			buildPhases = (
-				F036792C25593D7B4BCAADB3 /* [CP] Check Pods Manifest.lock */,
+				C76CBA829D18E83E17CB3FBD /* [CP] Check Pods Manifest.lock */,
 				E0B962A42AB1017800C15974 /* Sources */,
 				E0B962A52AB1017800C15974 /* Frameworks */,
 				E0B962A62AB1017800C15974 /* Resources */,
@@ -309,7 +347,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F036792C25593D7B4BCAADB3 /* [CP] Check Pods Manifest.lock */ = {
+		C76CBA829D18E83E17CB3FBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,20 +376,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B962E72AB1055200C15974 /* MapVC.swift in Sources */,
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
-				E0B9634C2AB1115100C15974 /* ContactM.swift in Sources */,
-				E0B962F52AB10B2900C15974 /* TravelTableVC.swift in Sources */,
-				E0B9634A2AB1113D00C15974 /* MapM.swift in Sources */,
+				E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */,
+				B52841712ABA4092009C8270 /* APIrequest.swift in Sources */,
+				E0B962F52AB10B2900C15974 /* TravelHistoryTableController.swift in Sources */,
+				E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */,
+				E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */,
 				E0B962DF2AB1034C00C15974 /* hammasir-final-project-bridgin-header.m in Sources */,
-				E0B962F32AB10AC100C15974 /* AddContactVC.swift in Sources */,
-				E0B963522AB1118600C15974 /* TravelTableM.swift in Sources */,
+				B5F265602AB785DE00949BB7 /* TravelUserDefualtsDB.swift in Sources */,
+				B52965D42AB847FF00318081 /* StartingTripFlowController.swift in Sources */,
+				E0E256B42AB34C0800042014 /* MapController.swift in Sources */,
+				E0B962F32AB10AC100C15974 /* AddContactController.swift in Sources */,
+				E0B963522AB1118600C15974 /* TripModel.swift in Sources */,
+				B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */,
 				E0B962AC2AB1017800C15974 /* AppDelegate.swift in Sources */,
-				E0B963482AB1113000C15974 /* MainM.swift in Sources */,
-				E0B962EF2AB1089800C15974 /* TravelVC.swift in Sources */,
-				E0B962F12AB108AD00C15974 /* ContactVC.swift in Sources */,
-				E0B963502AB1117400C15974 /* TravelM.swift in Sources */,
-				E0B9634E2AB1115F00C15974 /* AddContactM.swift in Sources */,
+				E0B962F12AB108AD00C15974 /* ContactController.swift in Sources */,
+				E03D386F2AB18EC20029C049 /* ContactUserDefualtsDB.swift in Sources */,
+				B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */,
+				E0B963502AB1117400C15974 /* TravelInformation.swift in Sources */,
 				E0B962AE2AB1017800C15974 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +431,7 @@
 		E0B962B12AB1017800C15974 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E0B962B22AB1017800C15974 /* Base */,
+				E0E256B32AB346E800042014 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -405,7 +447,7 @@
 		E0B962E42AB104F400C15974 /* Map.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E0B962E92AB1082B00C15974 /* en */,
+				E06DF4C02AB33E1A0073539E /* en */,
 			);
 			name = Map.storyboard;
 			sourceTree = "<group>";
@@ -449,6 +491,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -509,6 +552,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -529,7 +573,7 @@
 		};
 		E0B962D32AB1017900C15974 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86F107E13BB9BB0FD6DE400C /* Pods-hammasir-final-project.debug.xcconfig */;
+			baseConfigurationReference = 6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -549,7 +593,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = neshan.neshanMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -562,7 +606,7 @@
 		};
 		E0B962D42AB1017900C15974 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA711E2FC5EA8F9D7B565969 /* Pods-hammasir-final-project.release.xcconfig */;
+			baseConfigurationReference = 1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -582,7 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = neshan.neshanMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
