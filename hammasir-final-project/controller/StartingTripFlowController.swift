@@ -157,8 +157,6 @@ class StartingTripFlowController{
                                    newTripName: TripData.shared.tripName,
                                    newFormattedAddress: TripData.shared.formattedAddress)
         
-        print(tripsModel.gettripsHistory())
-
 
     }
 }

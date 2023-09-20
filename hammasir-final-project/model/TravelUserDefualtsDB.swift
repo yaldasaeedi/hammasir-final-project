@@ -17,7 +17,6 @@ class TravelUserDefualtsDB : TravelStorage{
     }
     
     func saveTravel(_ travel: TravalInformation) {
-        print("in save travel")
         do {
             let encoder = JSONEncoder()
             var savedTravels = fetchTravels() // Fetch the existing travels

@@ -10,6 +10,7 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     var yOrigin : Double?
     var formattedAddress : String?
     
+    var APIRequestForFormatedAddress : APIrequest = APIrequest()
     var mapView: NTMapView?
     var startingTrip : StartingTripFlowController = StartingTripFlowController()
     var markerLayer: NTVectorElementLayer?
@@ -19,6 +20,8 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     var userLocation: CLLocation!
     var locationManager: CLLocationManager!
     var zoomNumber : Float = 13
+    
+    
     let lastUpdateTime = NSString()
     let mRequestingLocationUpdates = Bool()
     
@@ -177,10 +180,18 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     }
     
     func accessSharedData() {
+        print(" its in access data")
+
         TripData.shared.originLng = xOrigin!
         TripData.shared.originLat = yOrigin!
         TripData.shared.destinationLng = xDestination!
         TripData.shared.destinationLat = yDestination!
+        let tempFormattedAdrressForOrigin = APIRequestForFormatedAddress.getTheAddress(latitude: xOrigin!, langitude: yOrigin!)
+        let tempFormattedAdrressForDestination = APIRequestForFormatedAddress.getTheAddress(latitude: xDestination!, langitude: yDestination!)
+        print(" its in access data")
+        print(tempFormattedAdrressForOrigin)
+        print(tempFormattedAdrressForDestination)
+
         //TripData.shared.formattedAddress = formattedAddress!
     }
     @IBAction func focusOnUserLocation(_ sender: Any) {

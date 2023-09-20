@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52841712ABA4092009C8270 /* APIrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52841702ABA4092009C8270 /* APIrequest.swift */; };
 		B52965D42AB847FF00318081 /* StartingTripFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965D32AB847FF00318081 /* StartingTripFlowController.swift */; };
 		B52965DB2AB8599900318081 /* TableViewForSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52965DA2AB8599900318081 /* TableViewForSelectController.swift */; };
 		B58251842AB977E20071AEC3 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B58251832AB977E20071AEC3 /* NeshanHelper.m */; };
@@ -57,6 +58,7 @@
 		1E9B7A9B54BAC2650D1DBB4F /* Pods-hammasir-final-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.release.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.release.xcconfig"; sourceTree = "<group>"; };
 		6781E0A0128024EB8AB47F40 /* Pods-hammasir-final-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hammasir-final-project.debug.xcconfig"; path = "Target Support Files/Pods-hammasir-final-project/Pods-hammasir-final-project.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFCC23FE09B83AC5BBE61AD /* Pods_hammasir_final_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hammasir_final_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52841702ABA4092009C8270 /* APIrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIrequest.swift; sourceTree = "<group>"; };
 		B52965D32AB847FF00318081 /* StartingTripFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTripFlowController.swift; sourceTree = "<group>"; };
 		B52965DA2AB8599900318081 /* TableViewForSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForSelectController.swift; sourceTree = "<group>"; };
 		B58251832AB977E20071AEC3 /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				E0B963512AB1118600C15974 /* TripModel.swift */,
 				E0B9634B2AB1115100C15974 /* ContactModel.swift */,
 				E03D386C2AB18E970029C049 /* ContactInformation.swift */,
+				B52841702ABA4092009C8270 /* APIrequest.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				E0B962B02AB1017800C15974 /* ViewController.swift in Sources */,
 				E0B9634C2AB1115100C15974 /* ContactModel.swift in Sources */,
+				B52841712ABA4092009C8270 /* APIrequest.swift in Sources */,
 				E0B962F52AB10B2900C15974 /* TravelHistoryTableController.swift in Sources */,
 				E03D386D2AB18E970029C049 /* ContactInformation.swift in Sources */,
 				E03D38712AB18F140029C049 /* CustomContactTVC.swift in Sources */,
